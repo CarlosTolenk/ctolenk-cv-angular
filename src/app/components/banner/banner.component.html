@@ -15,12 +15,21 @@
         <span class="typing-span" *ngIf="stateTyping == 3" typingAnimation [typeSpeed]="100" [hideCursorOnComplete]="cursor" [condition]="start" [startDelay]="1000" (complete)="onTypingAnimationComplete()">
             {{ stringInterpolation }}
         </span>  
-      </div> 
+        <span class="typing-span" *ngIf="stateTyping == 4" typingAnimation [typeSpeed]="100" [hideCursorOnComplete]="cursor" [condition]="start" [startDelay]="1000" (complete)="onTypingAnimationComplete()">
+            {{ stringInterpolation }}
+        </span>  
+      
+      </div>       
     </div>
 
+
+      
     <div class="goto-container">
-        <a (click)="navigationBeggin(750)"><i class="fa fa-arrow-down"></i></a>
+        <a (click)="navigationBeggin(750)"><i class="fa fa-arrow-down"></i></a>       
     </div> 
+
+
+  
  </div>
 
 

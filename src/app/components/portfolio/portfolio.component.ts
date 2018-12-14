@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import * as $ from 'jquery';
+
+
 
 @Component({
   selector: 'app-portfolio',
@@ -11,5 +14,6 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit() {
   }
+  
 
 }

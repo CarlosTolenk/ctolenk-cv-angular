@@ -1,3 +1,5 @@
+<div class="animated  fadeInLeft ">
+
 <!--Main-->
 <main class="cd-main">
 	<!--Inner Main Section-->
@@ -28,6 +30,7 @@
 						<div class="mb40">
 							<h3>Professional Skill</h3>
 							<!--1-->
+							<br>
 							<div class="row">
 								<div class="mb50">
 									<div class="col-sm-2">
@@ -82,8 +85,8 @@
 										</div>
 									</div>
 								</div>
-              </div>
-              <!--5-->
+							</div>
+							<!--5-->s
 							<div class="row">
 								<div class="mb50">
 									<div class="col-sm-2">
@@ -163,41 +166,72 @@
 							<h3>Additional Skill</h3>
 							<div class="row text-center mb60">
 								<!--1-->
-								<div class="col-sm-4 col-xs-12 mob_chart">
-									<div class="chart" data-percent="68" data-barColor="#0487cc" data-trackColor="#fff" data-lineWidth="3" data-barSize="150">
-										<div class="chart-percent">
-											<span></span>%
-										</div>
-									</div>
-									<div class="text-center mob_counter">
-										<h5>Communication Skill</h5>
-									</div>
+								<div class="col-sm-4 col-xs-12 mob_chart">								
+									<circle-progress
+									[percent]="80"
+									[radius]="15"
+									[outerStrokeWidth]="1"
+									[innerStrokeWidth]="0.15"
+									[outerStrokeColor]="'#e21e34'"
+									[innerStrokeColor]="'#0487cc'"
+									[animation]="true"
+									[animationDuration]="1300"
+									[space]="0.6"
+									responsive="true"
+									showTitle="true"					
+									subtitle="Project Manager"
+									[titleFontSize]="5"
+									[subtitleFontSize]="2.5"
+									[unitsFontSize]="5"	
+									class="circle-progress-ng"
+									></circle-progress>								
 								</div>
 								<!--2-->
-								<div class="col-sm-4 col-xs-12 mob_chart">
-									<div class="chart" data-percent="90" data-barColor="#0487cc" data-trackColor="#fff" data-lineWidth="3" data-barSize="150">
-										<div class="chart-percent">
-											<span></span>%
-										</div>
-									</div>
-									<div class="text-center mob_counter">
-										<h5>English</h5>
-									</div>
+								<div class="col-sm-4 col-xs-12 mob_chart">								
+									<circle-progress
+									[percent]="87"
+									[radius]="15"
+									[outerStrokeWidth]="1"
+									[innerStrokeWidth]="0.15"
+									[outerStrokeColor]="'#e21e34'"
+									[innerStrokeColor]="'#0487cc'"
+									[animation]="true"
+									[animationDuration]="1300"
+									[space]="0.6"
+									responsive="true"
+									showTitle="true"					
+									subtitle="Communication Skill"
+									[titleFontSize]="5"
+									[subtitleFontSize]="2.5"
+									[unitsFontSize]="5"	
+									class="circle-progress-ng"
+									></circle-progress>								
 								</div>
 								<!--3-->
-								<div class="col-sm-4 col-xs-12 mob_chart">
-									<div class="chart" data-percent="83" data-barColor="#0487cc" data-trackColor="#fff" data-lineWidth="3" data-barSize="150">
-										<div class="chart-percent">
-											<span></span>%
-										</div>
-									</div>
-									<div class="text-center mob_counter">
-										<h5>Creative</h5>
-									</div>
+								<div class="col-sm-4 col-xs-12 mob_chart">								
+									<circle-progress
+									[percent]="82"
+									[radius]="15"
+									[outerStrokeWidth]="1"
+									[innerStrokeWidth]="0.15"
+									[outerStrokeColor]="'#e21e34'"
+									[innerStrokeColor]="'#0487cc'"
+									[animation]="true"
+									[animationDuration]="1300"
+									[space]="0.6"
+									responsive="true"
+									showTitle="true"					
+									subtitle="Creative"
+									[titleFontSize]="5"
+									[subtitleFontSize]="2.5"
+									[unitsFontSize]="5"	
+									class="circle-progress-ng"
+									></circle-progress>								
 								</div>
 							</div>
 						</div>
 						<!--End of Additional Skill-->
+						<br>
 
 						<!--Experience-->
 						<div class="mb40">
@@ -337,10 +371,7 @@
 		<div class="text-center mb40">
 			<button class="btn system_btn download_icon">
 				<span></span>Download CV
-			</button>
-			<button class="btn system_btn ml40 print_icon">
-				<span></span>Print CV
-			</button>
+			</button>		
 		</div>
 		<!--End of Resume Download Btn-->
 
@@ -349,3 +380,46 @@
 
 </main>
 <!--End Main-->
+</div>
+
+
+
+
+<div class="container">
+	<app-carousel></app-carousel>
+</div>
+
+
+
+
+
+<!-- <div class=" container">
+		<div class="col-lg-12">
+				<ngx-slick-carousel class="carousel" 
+				#slickModal="slick-carousel" 
+				[config]="slideConfig" 			
+				>
+				<ng-container *ngFor="let slide of slides" class="slide">
+						<div ngxSlickItem >
+								<img src="{{ slide.img }}" alt="" width="100%">
+								<p>
+									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tempora temporibus eligendi culpa dolor, voluptate architecto eius voluptatibus in! Ex quod cum ratione. Blanditiis tenetur dolorem repellat sunt eaque error!
+								</p>
+							
+							</div>
+						
+
+				</ng-container>
+		
+
+
+			</ngx-slick-carousel>
+			<button (click)="addSlide()">Add</button>
+			<button (click)="removeSlide()">Remove</button>
+			<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
+			<button (click)="slickModal.unslick()">unslick</button>
+		</div>
+</div> -->
+
+
+
