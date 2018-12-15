@@ -43,8 +43,8 @@
 										</div>
 									</div>
 								</div>
-              </div>
-            	<!--2-->
+							</div>
+							<!--2-->
 							<div class="row">
 								<div class="mb50">
 									<div class="col-sm-2">
@@ -113,8 +113,8 @@
 										</div>
 									</div>
 								</div>
-              </div>
-              <!--7-->
+							</div>
+							<!--7-->
 							<div class="row">
 								<div class="mb50">
 									<div class="col-sm-2">
@@ -127,9 +127,8 @@
 										</div>
 									</div>
 								</div>
-              </div>
-              
-              <!--8-->
+							</div>							
+							<!--8-->
 							<div class="row">
 								<div class="mb50">
 									<div class="col-sm-2">
@@ -142,8 +141,7 @@
 										</div>
 									</div>
 								</div>
-							</div>
-			
+							</div>			
 							<!--9-->
 							<div class="row">
 								<div class="mb50">
@@ -333,37 +331,71 @@
 						<div class="mb40">
 							<h3>My Best Quotes</h3>
 							<div id="quotes">
-								<!--1-->
-								<blockquote>
-									<p>"Sit ametctetur adipising elit, sed do eiusmod tempor incididint ut labore magna aliuua. Ut enim ad minim veniam, quis nosturd exercitation u, lamco laboris nisi ut aliquip "</p>
-								</blockquote>
-								<!--2-->
-								<blockquote>
-									<p>
-										"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-									</p>
-								</blockquote>
-								<!--3-->
-								<blockquote>
-									<p>" It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout "</p>
-								</blockquote>
-								<!--4-->
-								<blockquote>
-									<p>" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
-								</blockquote>
+								<ngx-slick-carousel class="carousel" 
+									#slickModal="slick-carousel" 
+									[config]="slideConfig" 			
+									>
+									<ng-container *ngFor="let quote of blockquotes" class="slide">
+										<div ngxSlickItem >
+											<blockquote>
+												<p>{{quote.text}}</p>
+											</blockquote>
+										</div>
+									</ng-container>
+								</ngx-slick-carousel>						
 							</div>
 						</div>
-            <!--End of Best Quotes Slider-->
-            
-
-
-
-          </div>
+						<!--End of Best Quotes Slider-->
+         			 </div>
 				</div>
 				<!--End of Main Content-->
 			</div>
 		</div>
 		<!--End Main Container-->
+
+		<!--Testimonial Slider-->
+		<section class="testimonial_section mb40">			
+			<div class="container text-center">
+				<img class="thumbs-ctolenk" src="assets/images/ctolenk-gray.png" alt="CTolenk Gray">
+				<!-- TESTIMONIAL CONTAINER  -->
+				<div class="testimonial-slider">
+					<div>
+						<ngx-slick-carousel class="carousel slider-for " 
+							#slickModal="slick-carousel" 
+							[config]="slideConfigTestimonio" 			
+							>
+							<ng-container *ngFor="let quote of testimonio" class="slide">
+								<div ngxSlickItem >
+									<p class="col-sm-10 col-sm-offset-1">{{quote.text}}</p>
+								</div>
+							</ng-container>
+						</ngx-slick-carousel>						
+					</div>		
+				</div>
+				<span class="testimonial-divider testimonial-divider-color"></span>
+
+				<!-- TESTIMONIALS THUMB CONTAINER  -->
+				<div class="testimonial-thumbs">
+					<div>
+						<ngx-slick-carousel class="carousel  slider-nav " 
+							#slickModal="slick-carousel" 
+							[config]="slideConfigAvatar " 			
+							>
+							<ng-container *ngFor="let client of avatars" class="slide">
+								<div ngxSlickItem >
+									<img src="{{client.img}}" alt="{{client.name}}" />
+									<div class="testimonial-user">
+										<h4>{{client.name}}</h4>
+										<h5>{{client.role}}, {{client.company}}</h5>
+									</div>
+								</div>
+							</ng-container>
+						</ngx-slick-carousel>					
+					</div>					
+				</div>
+			</div>
+		</section>
+		<!--End of Testimonial Slider-->
 
 
 
@@ -393,33 +425,9 @@
 
 
 
-<!-- <div class=" container">
-		<div class="col-lg-12">
-				<ngx-slick-carousel class="carousel" 
-				#slickModal="slick-carousel" 
-				[config]="slideConfig" 			
-				>
-				<ng-container *ngFor="let slide of slides" class="slide">
-						<div ngxSlickItem >
-								<img src="{{ slide.img }}" alt="" width="100%">
-								<p>
-									Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam tempora temporibus eligendi culpa dolor, voluptate architecto eius voluptatibus in! Ex quod cum ratione. Blanditiis tenetur dolorem repellat sunt eaque error!
-								</p>
-							
-							</div>
-						
 
-				</ng-container>
 		
 
-
-			</ngx-slick-carousel>
-			<button (click)="addSlide()">Add</button>
-			<button (click)="removeSlide()">Remove</button>
-			<button (click)="slickModal.slickGoTo(2)">slickGoto 2</button>
-			<button (click)="slickModal.unslick()">unslick</button>
-		</div>
-</div> -->
 
 
 

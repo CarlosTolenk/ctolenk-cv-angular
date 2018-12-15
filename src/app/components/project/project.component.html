@@ -1,3 +1,5 @@
+<div class="animated  fadeInDown ">
+
 <!--Main-->
 <main class="cd-main">
 	<!--Inner Main Section-->
@@ -18,14 +20,14 @@
 					<!--Portfolio Right side bar-->
 					<div class="col-sm-4 col-sm-push-8">
 						<!--Search-->
-						<div class="input-group search_btn">
+						<!-- <div class="input-group search_btn">
 							<input type="text" class="form-control" placeholder="Search for...">
 							<span class="input-group-btn">
 								<button class="btn btn-secondary" type="button">
 									<i class="fa fa-search"></i>
 								</button>
 							</span>
-						</div>
+						</div> -->
 						<!--Categories-->
 						<div class="port_detail_next_search">
 							<h4 class="system_font_color mtb-40">Categories</h4>
@@ -113,37 +115,43 @@
 								<div class="col-sm-12">
 									<div id="big_banner">
 										<div class="port_big_img">
-											<img class="img img-responsive mt20" src="assets/images/portfolio/portfolio_big1.jpg" alt="Big_ Details">
-											<div class="port_detail_title">Sales Management Module</div>
+
+											<ngx-slick-carousel class="carousel slider-for" 
+												#slickModal="slick-carousel" 
+												[config]="slideConfigProject" 			
+												>
+												<ng-container *ngFor="let project of projectBig" class="slide">
+													<div ngxSlickItem >
+															<img class="img img-responsive mt20" src="{{project.img}}" alt="Big_ Details">
+															<div class="port_detail_title">{{project.title}}</div>
+													</div>
+												</ng-container>
+											</ngx-slick-carousel>											
 										</div>								
 									</div>
 								</div>
 							</div>
-							<!-- <div class="row mt20">
-								<div class="col-sm-12">
-									<div id="small_banner">
-										<div>
-											<img class="img img-responsive" src="assets/images/portfolio/portfolio_small1.jpg" alt="small-details" >
-										</div>
-										<div>
-											<img class="img img-responsive" src="assets/images/portfolio/portfolio_small2.jpg" alt="small-details" >
-										</div>
-										<div>
-											<img class="img img-responsive" src="assets/images/portfolio/portfolio_small3.jpg" alt="small-details" >
-										</div>
-										<div>
-											<img class="img img-responsive" src="assets/images/portfolio/portfolio_small4.jpg" alt="small-details" >
-										</div>
-										<div>
-											<img class="img img-responsive" src="assets/images/portfolio/portfolio_small5.jpg" alt="small-details" >
-										</div>
-										<div>
-											<img class="img img-responsive" src="assets/images/portfolio/portfolio_small6.jpg" alt="small-details" >
-										</div>
+							<div class="row mt20">
+								<div class="col-sm-12">		
+									<div>
+									<ngx-slick-carousel class="carousel  slider-nav " 
+										#slickModal="slick-carousel" 
+										[config]="slideConfigProjectAvatar " 			
+										>
+										<ng-container *ngFor="let project of projectSmall" class="slide">
+											<div ngxSlickItem >
+													<img class="img img-responsive" src="{{project.img}}" alt="small-details" >
+											</div>
+										</ng-container>
+									</ngx-slick-carousel>	
+
+
+
+
 
 									</div>
 								</div>
-							</div> -->
+							</div>
 						</div>
 						<div class="row">
 							<div class="col-sm-12">
@@ -171,10 +179,9 @@
 								<h3>Technology Used</h3>
 								<ul class="port_source pl20">
 									<li><h4>Angular 7</h4></li>
-									<li><h4>Bootstrap 3</h4></li>
-									<li><h4>MailChimp</h4></li>
-									<li><h4>Nodejs</h4></li>
-									<li><h4>HTML 5</h4></li>
+									<li><h4>Bootstrap 4</h4></li>
+									<li><h4>Socket IO</h4></li>
+									<li><h4>Nodejs</h4></li>								
 									<li><h4>Twilio</h4></li>             
 								</ul>
 							</div>
@@ -185,14 +192,14 @@
 									<li class="port_tech_item">
 										<div class="divider">
 											<span class="port_icon1"></span>
-											<h4>Parallax Effect</h4>
+											<h4>Real Time</h4>
 											<p>Give extra smooth effect to your web page</p>
 										</div>
 									</li>
 									<li class="port_tech_item">
 										<div class="divider">
 											<span class="port_icon2"></span>
-											<h4>Front - End Development</h4>
+											<h4>Single Page Application</h4>
 											<p>Give extra smooth effect to your web page</p>
 										</div>
 									</li>
@@ -212,35 +219,72 @@
 								<div class="col-sm-12">
 									<h3 class="text-left">Time Duration</h3>
 									<div class="col-sm-4 col-xs-12 mob_chart">
-										<div class="chart" data-percent="80" data-barColor="#0487cc" data-trackColor="#fff" data-lineWidth="3" data-barSize="150">
-											<div class="chart-percent">
-												<span></span>Days
-											</div>
-										</div>
+										<circle-progress
+										[percent]="80"
+										[radius]="15"
+										[outerStrokeWidth]="1"
+										[innerStrokeWidth]="0.15"
+										[outerStrokeColor]="'#e21e34'"
+										[innerStrokeColor]="'#0487cc'"
+										[animation]="true"
+										[animationDuration]="3500"
+										[space]="0.6"
+										responsive="true"
+										showTitle="true"					
+										subtitle="Days"
+										[titleFontSize]="6"
+										[subtitleFontSize]="3.5"
+										[unitsFontSize]="0.1"	
+										class="circle-progress-ng"
+										></circle-progress>	
 										<div class="text-center">
-											<h5 class="mb20">Communication Skill</h5>
+											<h5 class="mb20">Time of development</h5>
 											<p>A few months ago, we found ridiculously cheap plane </p>
 										</div>
 									</div>
 									<div class="col-sm-4 col-xs-12 mob_chart">
-										<div class="chart" data-percent="90" data-barColor="#0487cc" data-trackColor="#fff" data-lineWidth="3" data-barSize="150">
-											<div class="chart-percent">
-												<span></span>%
-											</div>
-										</div>
+										<circle-progress
+										[percent]="92"
+										[radius]="15"
+										[outerStrokeWidth]="1"
+										[innerStrokeWidth]="0.15"
+										[outerStrokeColor]="'#e21e34'"
+										[innerStrokeColor]="'#0487cc'"
+										[animation]="true"
+										[animationDuration]="3500"
+										[space]="0.6"
+										responsive="true"
+										showTitle="true"					
+										subtitle="UI/UX"
+										[titleFontSize]="6"
+										[subtitleFontSize]="3.5"
+										[unitsFontSize]="3.1"	
+										class="circle-progres"></circle-progress>
 										<div class="text-center">
-											<h5 class="mb20">English</h5>
+											<h5 class="mb20">Easy to use</h5>
 											<p>A few months ago, we found ridiculously cheap plane </p>
 										</div>
 									</div>
 									<div class="col-sm-4 col-xs-12 mob_chart">
-										<div class="chart" data-percent="83" data-barColor="#0487cc" data-trackColor="#fff" data-lineWidth="3" data-barSize="150">
-											<div class="chart-percent">
-												<span></span>%
-											</div>
-										</div>
+										<circle-progress
+										[percent]="100"
+										[radius]="15"
+										[outerStrokeWidth]="1"
+										[innerStrokeWidth]="0.15"
+										[outerStrokeColor]="'#e21e34'"
+										[innerStrokeColor]="'#0487cc'"
+										[animation]="true"
+										[animationDuration]="3500"
+										[space]="0.6"
+										responsive="true"
+										showTitle="true"					
+										subtitle="Operations"
+										[titleFontSize]="6"
+										[subtitleFontSize]="3.5"
+										[unitsFontSize]="3.1"	
+										class="circle-progres"></circle-progress>
 										<div class="text-center">
-											<h5 class="mb20">Creative</h5>
+											<h5 class="mb20">Customer Satisfaction</h5>
 											<p>A few months ago, we found ridiculously cheap plane </p>
 										</div>
 									</div>
@@ -253,52 +297,25 @@
 								<h3>Client Review</h3>
 								<div id="review">
 									<div>
-										<blockquote>
-											<p>"Sit ametctetur adipising elit, sed do eiusmod tempor incididint ut labore magna aliuua. Ut enim ad minim veniam, quis nosturd exercitation u, lamco laboris nisi ut aliquip "</p>
-
-										</blockquote>
-										<div class="text-center mt20 mb20">
-											<h5 class="text-uppercase system_font_color">Grenchen Pearce</h5>
-											<h6>Boston Brothers co.</h6>
-											<span class="system_span">4th July 2016</span>
-										</div>
-									</div>
-									<div>
-										<blockquote>
-											<p>
-												"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-											</p>
-										</blockquote>
-										<div class="text-center mt20 mb20">
-											<h5 class="text-uppercase system_font_color">John Doe</h5>
-											<h6>New Investers</h6>
-											<span class="system_span">6th June 2016</span>
-										</div>
-									</div>
-									<div>
-										<blockquote>
-											<p>" It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout "</p>
-
-										</blockquote>
-										<div class="text-center mt20 mb20">
-											<h5 class="text-uppercase system_font_color">Mark Jaison</h5>
-											<h6>Boston Brothers co.</h6>
-											<span class="system_span">10th August 2016</span>
-										</div>
-									</div>
-									<div>
-										<blockquote>
-											<p>" There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour "</p>
-
-										</blockquote>
-										<div class="text-center mt20 mb20">
-											<h5 class="text-uppercase system_font_color">Grahen Doe</h5>
-											<h6>Boston Brothers co.</h6>
-											<span class="system_span">29th August 2016</span>
-										</div>
-									</div>
+										<ngx-slick-carousel class="carousel" 
+											#slickModal="slick-carousel" 
+											[config]="slideConfig" 			
+											>
+											<ng-container *ngFor="let quote of blockquotes" class="slide">
+												<div ngxSlickItem >
+													<blockquote>
+														<p>{{quote.text}}</p>
+													</blockquote>
+													<div class="text-center mt20 mb20">
+														<h5 class="text-uppercase system_font_color">{{quote.name}}</h5>
+														<h6>{{quote.company}}.</h6>
+														<span class="system_span">{{quote.date}}</span>
+													</div>
+												</div>
+											</ng-container>
+										</ngx-slick-carousel>										
+									</div>						
 								</div>
-
 							</div>
 						</div>
 					</div>
@@ -316,3 +333,5 @@
 	<!--End Inner Main Section-->
 </main>
 <!--End Main-->
+
+</div>
