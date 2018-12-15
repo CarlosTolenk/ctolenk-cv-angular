@@ -19,7 +19,9 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { BlogComponent } from './components/blog/blog.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { CarouselComponent } from './components/shared/carousel/carousel.component'
+import { CarouselComponent } from './components/shared/carousel/carousel.component';
+import { ProjectComponent } from './components/project/project.component';
+import { BlogDetailComponent } from './components/blog-detail/blog-detail.component'
 
 @NgModule({
   declarations: [
@@ -34,12 +36,14 @@ import { CarouselComponent } from './components/shared/carousel/carousel.compone
     BlogComponent,
     ContactUsComponent,
     NotFoundComponent,
-    CarouselComponent
+    CarouselComponent,
+    ProjectComponent,
+    BlogDetailComponent
    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,    
      // Specify ng-circle-progress as an import
      NgCircleProgressModule.forRoot({
       // set defaults here
