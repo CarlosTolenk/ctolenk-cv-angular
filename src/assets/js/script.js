@@ -28,8 +28,8 @@ $(document).ready(function(){
                 $('body nav').animate({
                     opacity: 1,
                     left: "0",                  
-                  }, 500, function() {            
-                //   console.log("ready");
+                  }, 300, function() {            
+                  console.log("Open");
                 });      
                   
               
@@ -38,8 +38,8 @@ $(document).ready(function(){
                 $('body nav').animate({
                     opacity: 1,
                     left: "-94",                  
-                  }, 500, function() {            
-                //   console.log("ready");
+                  }, 300, function() {            
+                  console.log("Close");
                 });  
                 
             }

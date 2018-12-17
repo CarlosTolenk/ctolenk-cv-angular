@@ -21,9 +21,10 @@
 
 
 :root{
-    --primary-color: #e21e34;
+    --primary-color: #D32E2E;
+    --primary-color-light: #E22D3C;
     --primary-color-dark: #bd1d2f;
-    --secondary-color: #BABDBF;
+    --secondary-color: #BCBEC0;
     --secondary-color-dark: rgb(159, 155, 155);
 }
 

@@ -39,8 +39,7 @@ export class BannerComponent implements OnInit {
     
         setTimeout(()=>{
           this.stateTyping++; 
-          console.log("Fin del timmer");
-          console.log(this.stateTyping);
+     
         
         
         },500); 
@@ -53,8 +52,7 @@ export class BannerComponent implements OnInit {
         this.stringInterpolation = 'Backend Developer';
         setTimeout(()=>{
           this.stateTyping++; 
-          console.log("Fin del timmer");
-          console.log(this.stateTyping);
+        
         
         
         },500); 
@@ -65,8 +63,7 @@ export class BannerComponent implements OnInit {
         this.stringInterpolation = 'FullStack Developer';
         setTimeout(()=>{
           this.stateTyping++; 
-          console.log("Fin del timmer");
-          console.log(this.stateTyping);
+        
         
         
         },500); 
@@ -78,8 +75,7 @@ export class BannerComponent implements OnInit {
         this.stringInterpolation = 'Mobile Developer';
         setTimeout(()=>{
           this.stateTyping = 1; 
-          console.log("Fin del timmer");
-          console.log(this.stateTyping);
+      
         
         
         },500); 

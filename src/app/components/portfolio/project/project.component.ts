@@ -118,7 +118,7 @@ export class ProjectComponent implements OnInit {
         breakpoint: 1024,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 3,
+          slidesToScroll: 4,
           infinite: true,
           dots: false,
           arrows: true
@@ -135,8 +135,8 @@ export class ProjectComponent implements OnInit {
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           arrows: true
         }
       }

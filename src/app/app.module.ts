@@ -1,49 +1,57 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
+import { CommonModule, LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 
-import { AppRoutingModule } from './app-routing.module';
+//Routes
+import { Approutes } from './app-routing.module';
+
+//Componentes Raiz
 import { AppComponent } from './app.component';
-import { HomeComponent } from './components/home/home.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { TypingAnimationDirective } from 'angular-typing-animation';
-// Import ng-circle-progress
-import { NgCircleProgressModule } from 'ng-circle-progress';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { LayoutComponent } from './components/layout/layout.component';
+
+
 // Import your library
+import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
-import { BannerComponent } from './components/banner/banner.component';
-import { ResumeComponent } from './components/resume/resume.component';
-import { PortfolioComponent } from './components/portfolio/portfolio.component';
-import { BlogComponent } from './components/blog/blog.component';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
-import { NotFoundComponent } from './components/not-found/not-found.component';
-import { CarouselComponent } from './components/shared/carousel/carousel.component';
-import { ProjectComponent } from './components/project/project.component';
-import { BlogDetailComponent } from './components/blog-detail/blog-detail.component'
+//Import Module
+// import { HomeModule } from './components/home/home.module';
+// import { PortfolioModule } from './components/portfolio/portfolio.module';
+// import { ResumeCTModule } from './components/resume/resumeCT.module';
+// import { BlogModule } from './components/blog/blog.module';
+// import { ContactUsModule } from './components/contact-us/contact-us.module';
+
+
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HomeComponent,
+    AppComponent, 
     MenuComponent,
-    FooterComponent,
-    TypingAnimationDirective,
-    BannerComponent,
-    ResumeComponent,
-    PortfolioComponent,
-    BlogComponent,
-    ContactUsComponent,
+    FooterComponent, 
     NotFoundComponent,
-    CarouselComponent,
-    ProjectComponent,
-    BlogDetailComponent
+    LayoutComponent,  
    
   ],
   imports: [
+    CommonModule,  
     BrowserModule,
-    AppRoutingModule,    
+    FormsModule,
+    HttpClientModule,  
+    RouterModule.forRoot(Approutes, { useHash: false }),
+    // HomeModule,
+    // ResumeCTModule,
+    // PortfolioModule,
+    // BlogModule,
+    // ContactUsModule,
+
      // Specify ng-circle-progress as an import
      NgCircleProgressModule.forRoot({
       // set defaults here
@@ -54,10 +62,18 @@ import { BlogDetailComponent } from './components/blog-detail/blog-detail.compon
       innerStrokeColor: "#C7E596",
       animationDuration: 600,      
     }),
-    SlickCarouselModule
+    SlickCarouselModule,
+    // TypingAnimationModule,
+
 
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
+    }
+  
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
