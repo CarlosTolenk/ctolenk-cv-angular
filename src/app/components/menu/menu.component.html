@@ -1,6 +1,6 @@
 
 <!-- Side Navigation -->
-<nav class="cd-side-navigation sidebar left animated">
+<nav class="cd-side-navigation sidebar" [className]="toogle ? 'cd-side-navigation sidebar selectecBar' : 'cd-side-navigation sidebar unselectecBar'" >
 	<ul>
 		<li>
 			<a routerLink="/home" routerLinkActive="selected">
@@ -37,8 +37,8 @@
 <!-- End Navigation -->
 
 <!--Mobile Menu icon-->
-<div id="sidebar-btn" class="sidebar-btn toggle_icon_block" data-action="toggle" data-side="left">
-	<div id="toggle_icon" class="toggle_icon">
+<div id="sidebar-btn" class="sidebar-btn toggle_icon_block" data-action="toggle" data-side="left" (click)="toogleMenu()">
+	<div id="toggle_icon"  [className]="toogle ? 'toggle_icon open' : 'toggle_icon'" >
 		<span></span>
 		<span></span>
 		<span></span>

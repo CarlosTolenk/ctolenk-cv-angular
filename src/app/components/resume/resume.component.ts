@@ -113,30 +113,7 @@ export class ResumeComponent implements OnInit {
       ]
    
     };
-  
-  addSlide() {
-    this.slides.push({img: "http://placehold.it/350x150/777777"})
-  }
-  
-  removeSlide() {
-    this.slides.length = this.slides.length - 1;
-  }
-  
-  slickInit(e) {
-    console.log('slick initialized');
-  }
-  
-  breakpoint(e) {
-    console.log('breakpoint');
-  }
-  
-  afterChange(e) {
-    console.log('afterChange');
-  }
-  
-  beforeChange(e) {
-    console.log('beforeChange');
-  }
+
 
   ngOnInit() {
 

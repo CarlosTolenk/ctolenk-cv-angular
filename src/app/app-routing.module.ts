@@ -9,13 +9,22 @@ export const Approutes: Routes = [
   {
     path: '',
     component: LayoutComponent,
-    children:[          
+    children:[         
+      { path: '', redirectTo: '/home', pathMatch: 'full' },
       { path: '', loadChildren: './components/home/home.module#HomeModule'},
       { path: '', loadChildren: './components/resume/resumeCT.module#ResumeCTModule'},
       { path: '', loadChildren: './components/portfolio/portfolio.module#PortfolioModule'},
       { path: '', loadChildren: './components/blog/blog.module#BlogModule'},
       { path: '', loadChildren: './components/contact-us/contact-us.module#ContactUsModule'},
     
+    ] 
+  },
+
+  {
+    path: 'home',
+    component: LayoutComponent,
+    children:[
+      { path: '', loadChildren: './components/home/home.module#HomeModule'}    
     ] 
   },
   

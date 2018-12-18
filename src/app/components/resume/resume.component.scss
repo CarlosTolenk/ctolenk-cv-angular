@@ -17,8 +17,7 @@
    margin-bottom: 1rem;
 
    @media screen and (min-width: 767px) {
-      width: 30%;
-     
+      width: 30%;     
     }
     @media screen and (min-width: 1024px) {
       width: 20%;
@@ -63,4 +62,21 @@
          font-weight: 600;
       }
    }
+}
+
+
+.circle-progress-container{
+   display: flex;
+   justify-content: center;
+   align-content: center;
+   flex-direction: column;
+
+   @media screen and (min-width: 767px) {
+    
+      flex-direction: row; 
+    }
+    @media screen and (min-width: 1024px) {
+      flex-direction: row; 
+    }    
+
 }

@@ -13,7 +13,7 @@ $(document).ready(function(){
     var $window = $(window);
     $window.resize(function resize() {
         var toggleSide = true;
-        if ($window.width() <= 1340) {
+        if ($window.width() <= 1024) {
             $('body nav').css('left','-94px');       
           
         }
@@ -21,30 +21,30 @@ $(document).ready(function(){
             $('body nav').css('left','0');      
         
         }
-        $('#toggle_icon').on('click',function(){
-            $(this).toggleClass('open');    
-            toggleSide = !toggleSide;
-            if(!toggleSide){         
-                $('body nav').animate({
-                    opacity: 1,
-                    left: "0",                  
-                  }, 300, function() {            
-                  console.log("Open");
-                });      
+        // $('#toggle_icon').on('click',function(){
+        //     $(this).toggleClass('open');    
+        //     toggleSide = !toggleSide;
+        //     if(!toggleSide){         
+        //         $('body nav').animate({
+        //             opacity: 1,
+        //             left: "0",                  
+        //           }, 300, function() {            
+        //           console.log("Open");
+        //         });      
                   
               
-            }else{
+        //     }else{
               
-                $('body nav').animate({
-                    opacity: 1,
-                    left: "-94",                  
-                  }, 300, function() {            
-                  console.log("Close");
-                });  
+        //         $('body nav').animate({
+        //             opacity: 1,
+        //             left: "-94",                  
+        //           }, 300, function() {            
+        //           console.log("Close");
+        //         });  
                 
-            }
+        //     }
                 
-        });
+        // });
     }).trigger('resize');
     /*======= Side-bar Menu Ends ======= */
 

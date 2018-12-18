@@ -35,15 +35,9 @@
               "./src/assets/js/jquery.2.2.3.min.js",
               "./src/assets/js/jquery.easing.min.js",
               "./src/assets/js/bootstrap.min.js",
-              "./src/assets/js/jquery.sidebar.min.js",
-              "./src/assets/js/jquery.counterup.js",
-              "./src/assets/js/waypoints.min.js",
-              "./src/assets/js/jquery.magnific-popup.min.js",
-          
-              "./src/assets/js/jquery.easypiechart.min.js",
-              "./src/assets/js/jquery.isotope.js",          
+         
             
-              "./src/assets/js/slick.min.js",
+   
               "node_modules/slick-carousel/slick/slick.min.js",
      
               "./src/assets/js/isotope.pkgd.min.js",

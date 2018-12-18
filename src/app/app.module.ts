@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CommonModule, LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { CommonModule, LocationStrategy, HashLocationStrategy, PathLocationStrategy} from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 
@@ -45,7 +45,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     BrowserModule,
     FormsModule,
     HttpClientModule,  
-    RouterModule.forRoot(Approutes, { useHash: false }),
+    RouterModule.forRoot(Approutes,  {scrollPositionRestoration: 'enabled',  useHash:false}),
     // HomeModule,
     // ResumeCTModule,
     // PortfolioModule,

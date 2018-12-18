@@ -7,9 +7,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuComponent implements OnInit {
 
-  constructor() { }
+  public selectedMenu:string;
+  public toogle:boolean = false;
+
+  constructor() { 
+    this.selectedMenu = "toggle_icon";
+  }
+
+ 
 
   ngOnInit() {
   }
+
+  toogleMenu(){  
+    if(this.toogle){ 
+      this.toogle = !this.toogle;      
+    }else{   
+      this.toogle = !this.toogle;   
+    }
+    console.log(this.toogle);   
+  
+    
+  }
+
+ 
 
 }
