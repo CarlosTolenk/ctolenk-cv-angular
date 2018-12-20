@@ -20,6 +20,8 @@ import { LayoutComponent } from './components/layout/layout.component';
 // Import your library
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 //Import Module
 // import { HomeModule } from './components/home/home.module';
@@ -27,6 +29,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 // import { ResumeCTModule } from './components/resume/resumeCT.module';
 // import { BlogModule } from './components/blog/blog.module';
 // import { ContactUsModule } from './components/contact-us/contact-us.module';
+import { ClickOutsideModule } from 'ng-click-outside';
 
 
 
@@ -45,12 +48,9 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     BrowserModule,
     FormsModule,
     HttpClientModule,  
+    ClickOutsideModule,
     RouterModule.forRoot(Approutes,  {scrollPositionRestoration: 'enabled',  useHash:false}),
-    // HomeModule,
-    // ResumeCTModule,
-    // PortfolioModule,
-    // BlogModule,
-    // ContactUsModule,
+ 
 
      // Specify ng-circle-progress as an import
      NgCircleProgressModule.forRoot({
@@ -63,9 +63,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
       animationDuration: 600,      
     }),
     SlickCarouselModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     // TypingAnimationModule,
-
-
   ],
   providers: [
     {

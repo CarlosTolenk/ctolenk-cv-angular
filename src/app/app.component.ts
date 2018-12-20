@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'ctolek-landing-angular';
+  title = 'CTolenk';
+
+  onClicK(){
+    console.log("Click donde sea");
+  }
+
 }

@@ -13,7 +13,7 @@ $(document).ready(function(){
     var $window = $(window);
     $window.resize(function resize() {
         var toggleSide = true;
-        if ($window.width() <= 1024) {
+        if ($window.width() < 1024) {
             $('body nav').css('left','-94px');       
           
         }

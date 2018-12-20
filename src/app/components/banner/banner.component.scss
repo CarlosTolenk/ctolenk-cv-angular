@@ -1,5 +1,7 @@
+$total-height: 2.5rem;
+
+
 .jumbotron {
-   margin-top: -1em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,13 +20,13 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;        
+    align-items: center;    
+    margin-bottom: $total-height;    
 }
 
   .img-banner{
-      width: 90%;
-      margin-top: -6em;
-      margin-bottom: 2em;
+      width: 90%;     
+      margin-bottom: 1em;
   }
 
   .iso-logo{
@@ -49,14 +51,13 @@
 }
 
 .text-phrase{
-  position: absolute;
-  bottom: calc(100vh - 30em);
   text-align: center;
   padding: 0.5em;
   font-family: 'Roboto Condensed', sans-serif;
   font-style: italic;
-  bottom: 15rem;
- 
+  margin-bottom: calc($total-height + 1);
+  margin-bottom: $total-height + 2rem;
+
 
   p{
     color: white;
@@ -66,12 +67,12 @@
 
 
   @media screen and (min-width: 375px) {
-    bottom:20rem;
+    margin-bottom: $total-height + 5rem;
    
   }
 
   @media screen and (min-width: 768px) {
-    bottom:18rem;
+    margin-bottom: $total-height + 6rem;
     p{
       font-size: 1.2em;
     }
@@ -79,7 +80,7 @@
   }
 
   @media screen and (min-width: 1024px) {
-    bottom:17rem;
+    margin-bottom: $total-height + 10rem;
     p{
       font-size: 1.5em;
     }
@@ -87,7 +88,7 @@
   }
 
   @media screen and (min-width: 1440px) {
-    bottom:21rem;
+    // bottom:21rem;
     p{
       font-size: 1.5em;
     }
@@ -96,7 +97,7 @@
 }
 
 .goto-container{
-  position: absolute;
+
   bottom: calc(100vh - 33em);
   background-color: var(--secondary-color-dark);
   width: 2.3em;
@@ -106,14 +107,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;    
-  bottom: 10rem;
+
   
   @media screen and (min-width: 375px) {
-    bottom: 10rem;
+   
   }
 
   @media screen and (min-width: 768px) {
-    bottom: calc(100vh - 32em);
+    
   }
 
   a{
@@ -154,9 +155,7 @@
         font-size: 3.4rem;
     }
 
-    .goto-container{       
-        bottom: 5em;         
-      }
+ 
     
   }
   
@@ -186,9 +185,7 @@
         font-size: 3rem;
     }
 
-    .goto-container{       
-        bottom: 6em;         
-    }
+
     
   }
   
@@ -218,9 +215,7 @@
         font-size: 3rem;
     }
 
-    .goto-container{       
-        bottom: 6em;         
-    }
+
     
   }
   
