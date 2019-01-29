@@ -1,10 +1,11 @@
 {
   "name": "CTolenk - Freelance",
   "short_name": "CTolenk",
-  "theme_color": "#0487CC",
+  "theme_color": "#D32E2E",
   "background_color": "#fafafa",
   "display": "standalone",
-  "scope": "/",
+  "orientation": "portrait",
+  "scope": "/#/",
   "start_url": "/",
   "icons": [
     {

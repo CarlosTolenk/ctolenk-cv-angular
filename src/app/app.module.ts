@@ -4,10 +4,20 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule, LocationStrategy, HashLocationStrategy, PathLocationStrategy} from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { ClickOutsideModule } from 'ng-click-outside';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+
 
 
 //Routes
 import { Approutes } from './app-routing.module';
+
+//Services
+import {LogUpdateService} from './services/log-update.service';
 
 //Componentes Raiz
 import { AppComponent } from './app.component';
@@ -23,13 +33,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
-//Import Module
-// import { HomeModule } from './components/home/home.module';
-// import { PortfolioModule } from './components/portfolio/portfolio.module';
-// import { ResumeCTModule } from './components/resume/resumeCT.module';
-// import { BlogModule } from './components/blog/blog.module';
-// import { ContactUsModule } from './components/contact-us/contact-us.module';
-import { ClickOutsideModule } from 'ng-click-outside';
+
+
 
 
 
@@ -50,7 +55,11 @@ import { ClickOutsideModule } from 'ng-click-outside';
     HttpClientModule,  
     ClickOutsideModule,
     RouterModule.forRoot(Approutes,  {scrollPositionRestoration: 'enabled',  useHash:false}),
- 
+    AngularFireModule.initializeApp(environment.firebase, 'CV-Angular'),
+    AngularFirestoreModule, // imports firebase/firestore, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
+    AngularFireStorageModule, // imports firebase/storage only needed for storage features
+    AngularFireDatabaseModule,
 
      // Specify ng-circle-progress as an import
      NgCircleProgressModule.forRoot({
@@ -66,10 +75,10 @@ import { ClickOutsideModule } from 'ng-click-outside';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     // TypingAnimationModule,
   ],
-  providers: [
+  providers: [LogUpdateService,
     {
       provide: LocationStrategy,
-      useClass: HashLocationStrategy
+      useClass: HashLocationStrategy      
     }
   
   ],

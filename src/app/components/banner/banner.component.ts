@@ -13,6 +13,7 @@ export class BannerComponent implements OnInit {
   public cursor: boolean = true;
   public stringInterpolation: string = "Frontend Developer";
   public stateTyping = 0;
+  public data;
 
   
 
@@ -20,6 +21,7 @@ export class BannerComponent implements OnInit {
 
   ngOnInit() {
     // Start after 1 second + 1 second of startDelay
+    this.data = JSON.parse(localStorage.getItem('homepage'));
     setTimeout(() => this.start = true, 1000)
   }
 
@@ -38,9 +40,7 @@ export class BannerComponent implements OnInit {
         this.stringInterpolation = 'Frontend Developer';  
     
         setTimeout(()=>{
-          this.stateTyping++; 
-     
-        
+          this.stateTyping++;         
         
         },500); 
              
@@ -51,9 +51,7 @@ export class BannerComponent implements OnInit {
       case 2: {
         this.stringInterpolation = 'Backend Developer';
         setTimeout(()=>{
-          this.stateTyping++; 
-        
-        
+          this.stateTyping++;        
         
         },500); 
         break;

@@ -1,0 +1,76 @@
+{
+    "homePage": {
+        "lema": "Programming is nothing more than making ideas come true in an automated and defined way",
+        "namePerson": "Carlos Tolentino",
+        "professional": "Web Developer / Mobile Developer",
+        "subtitle": "Available On Freelancer",
+        "descriptionI": "I am Carlos Tolentino and I am a developer with enough experience in web and mobile technologies. Since my youth I have been passionate about technology and electronics and I will provide only the most efficient job for my clients and their users.",
+        "descriptionII": "I devote myself to develop applications capable of meeting all the needs and optimize the business model of the companies in an efficient way, easy to use with the new tendencies and demands of the current technology.",
+        "someFact": [
+            {
+                "fact": "Cup of coffee",
+                "number": 245,
+                "icon": "coffee_icon"
+            },
+            {
+                "fact": "Hours of coding",
+                "number": 2245,
+                "icon": "clock_icon"
+            },
+            {
+                "fact": "Work shops",
+                "number": 26,
+                "icon": "beg_icon"
+            },
+            {
+                "fact": "Satisfied customer",
+                "number": 96,
+                "icon": "smile_icon"
+            },
+            {
+                "fact": "Line of code per minute",
+                "number": 22,
+                "icon": "code_icon"
+            },
+            {
+                "fact": "Project complited",
+                "number": 65,
+                "icon": "file_icon"
+            }            
+        ],
+        "bio": {
+            "description": "Bio Chevere",
+            "name": "Carlos Tolentino",
+            "birthday": "Nov 23th 1991",
+            "email": "carlos.tolentinoe@ctolenk.com",
+            "country": "Dominican Republic",
+            "phone": "+1 (829) 264-0093",
+            "twitter": {
+                "username": "@CarlosTolenk",
+                "url": "https://twitter.com/CarlosTolenk"
+            },
+            "github": {
+                "username": "CarlosTolenk",
+                "url": "https://github.com/CarlosTolenk"
+            }
+        },
+        "services": [
+            {
+                "title": "Mobile Develoer",
+                "description": "Mobile APP JEVI",
+                "icon": "gamepad_icon"
+            },
+            {
+                "title": "Web Develoer",
+                "description": "Web APP JEVI",
+                "icon": "webdev_icon"
+            },
+            {
+                "title": "UI/UX Desing",
+                "description": "UI/UX APP JEVI",
+                "icon": "designing_icon"
+            }
+        ]
+    }
+    
+}

@@ -22,5 +22,24 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "from-api",
+      "urls": [
+        "/",
+        "/home",
+        "/resume" ,
+        "/portfolio",
+        "/blog",
+        "/contact-ctolenk"
+      ],
+      "cacheConfig": {
+        "strategy": "freshness",
+        "maxSize": 15,
+        "maxAge": "30d",
+        "timeout": "5s"
+      }
+    }
   ]
 }
