@@ -14,7 +14,8 @@
 						<div class="col-sm-12">
 							<h1 class="title">My <span class="bolder">Portfolio</span> </h1>
 							<p class="mb40">
-								Assertively cultivate professional interfaces without synergistic etworks. Quickly erage existing customized ideas through client-based eliverables. Compellingly unleash fully tested outsourcing with prospective tunities. <br/><br/><strong>Hover on any portfolio/project to check out <a href="portfolio2.html" style="color:#0487cc; font-weight: 700">Quick view</a> action</strong>
+								{{data.description}}
+								<br/><br/><strong>Hover on any portfolio/project to check out <a href="portfolio2.html" style="color:#0487cc; font-weight: 700">Quick view</a> action</strong>
 							</p>
 						</div>
 					</div>
@@ -25,36 +26,37 @@
 				<div class="port-tab">
 					<div class="portfolio_filters_group">
 						<ul id="portfolioFilter" class="portfolioFilter text-center">
-							<li><button data-filter="*" class="btn portfolio_btn system_btn mobile_tabs current">All</button></li>
-							<li><button data-filter=".web" class="btn portfolio_btn system_btn mobile_tabs">Web Design</button></li>
-							<li><button data-filter=".app" class="btn portfolio_btn system_btn mobile_tabs">Web Application</button></li>
-							<li><button data-filter=".photo" class="btn portfolio_btn system_btn mobile_tabs">Mobile Application</button></li>							
+							<li><button (click)="onChangeFilter('ALL')" [ngClass]="{'current': selected != 'ALL' }" class="btn portfolio_btn system_btn mobile_tabs">All</button></li>
+							<li><button (click)="onChangeFilter('WEB')" [ngClass]="{'current': selected != 'WEB' }" class="btn portfolio_btn system_btn mobile_tabs ">Web Design</button></li>
+							<li><button (click)="onChangeFilter('MOBILE')" [ngClass]="{'current': selected != 'MOBILE' }" class="btn portfolio_btn system_btn mobile_tabs">Web Application</button></li>
+							<li><button (click)="onChangeFilter('UI/UX')" [ngClass]="{'current': selected != 'UI/UX' }" class="btn portfolio_btn system_btn mobile_tabs">Mobile Application</button></li>		
+									
 						</ul>
 					</div>
 				</div>
 				<!--End Portfolio/Project Main Categories-->
-
-				<div class="row">
-					<div class="grid">
-
-						<!--Portfolio/Project Main Content-->
-						<div id="portfolioContainer" class="portfolioContainer">
-							<!--Portfolio 1-->
-							<div *ngFor="let item of data.projects" class="col-sm-4 photo grid-item">
-								<div class="port_img mb25">
-									<img class="img img-responsive" src="assets/images/portfolio/portfolio1.jpg" alt="Portfolio-1">
-									<div class="port_hover_div">
-										<div class="port_hover_cont">
-											<h3>{{item.title}}</h3>
-											<p>This is Photoshop's version</p>
-											<a data-toggle="modal" data-target="#quick_view" class="btn system_btn">Quick View</a>
-											<a routerLink="/portfolio/name-project" class="btn system_btn">Detail View</a>
+				<div class="animated fadeIn">
+					<div class="row">
+						<div class="grid">
+							<!--Portfolio/Project Main Content-->
+							<div id="portfolioContainer" class="portfolioContainer ">
+								<!--Portfolio 1-->
+								<div *ngFor="let item of filterData" class="col-sm-4 photo grid-item">
+									<div class="port_img mb25">
+										<img class="img img-responsive" src="{{item.promo}}" alt="{{item.title}}">
+										<div class="port_hover_div">
+											<div class="port_hover_cont">
+												<h3>{{item.title}}</h3>
+												<p>{{item.subtitle}}</p>
+												<a data-toggle="modal" data-target="#quick_view" class="btn system_btn">Quick View</a>
+												<a routerLink="/portfolio/name-project" class="btn system_btn">Detail View</a>
+											</div>
 										</div>
 									</div>
-								</div>
-							</div>			
+								</div>			
+							</div>
+							<!--End Portfolio/Project Main Content-->
 						</div>
-						<!--End Portfolio/Project Main Content-->
 					</div>
 				</div>
 			</div>
@@ -122,38 +124,3 @@
 	</div>
 </div>
 <!-- End Quick Showcase of Portfolio/Project -->
-
-<script type="text/javascript">
-
-	/*======= Portfolio js starts ======= */
-	$(window).load(function(){
-    console.log("Desde Portfolio");
-		var $container = $('#portfolioContainer');
-		$container.isotope({
-			filter: '*',
-			animationOptions: {
-				duration: 750,
-				easing: 'linear',
-				queue: false
-			}
-		});
-
-		$('.portfolio_btn').on('click',function(){
-			$('.current').removeClass('current');
-			$(this).addClass('current');
-
-			var selector = $(this).attr('data-filter');
-			$container.isotope({
-				filter: selector,
-				animationOptions: {
-					duration: 750,
-					easing: 'linear',
-					queue: false
-				}
-			});
-			return false;
-		});
-	});
-	/*======= Portfolio js ends ======= */
-
-</script>
