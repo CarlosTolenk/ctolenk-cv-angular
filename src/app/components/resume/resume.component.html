@@ -15,7 +15,7 @@
 						<div class="col-sm-12">
 							<h1 class="title">My <span class="bolder">Resume</span></h1>
 							<p class="mb40">
-								Assertively cultivate professional interfaces without synergistic etworks. Quickly erage existing customized ideas through client-based eliverables. Compellingly unleash fully tested outsourcing with prospective tunities. Uniquely maximize client-centric tals rather than focused web-readiness. Intrinsicly monetize reliable interfaces rather than multimedia based experiences. synergistic networks. Quickly rather than multimedia based Collaboratively synergize economically sound process improvements with functionalized e-commerce.
+								{{data.description}}
 							</p>
 						</div>
 					</div>
@@ -25,137 +25,24 @@
 				<!--Main Content-->
 				<div class="row">
 					<div class="col-md-offset-1 col-xs-12 col-sm-11">
-
 						<!--Professional skill-->
 						<div class="mb40">
 							<h3>Professional Skill</h3>
-							<!--1-->
 							<br>
-							<div class="row">
+							<!-- For -->
+							<div *ngFor="let item of data.skills" class="row">
 								<div class="mb50">
 									<div class="col-sm-2">
-										<h4 class="mt0">JavaScript</h4>
+										<h4 class="mt0">{{item.name}}</h4>
 									</div>
 									<div class="col-sm-10">
 										<div class="progress">
-											<div class="progress-bar animated slideInLeft" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+											<div class="progress-bar animated slideInLeft" role="progressbar" aria-valuenow="item.number" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width': item.number +'%'}">
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<!--2-->
-							<div class="row">
-								<div class="mb50">
-									<div class="col-sm-2">
-										<h4 class="mt0">Nodejs</h4>
-									</div>
-									<div class="col-sm-10">
-										<div class="progress">
-											<div class="progress-bar animated slideInLeft" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- 3-->
-							<div class="row">
-								<div class="mb50">
-									<div class="col-sm-2">
-										<h4 class="mt0">Angular</h4>
-									</div>
-									<div class="col-sm-10">
-										<div class="progress">
-											<div class="progress-bar animated slideInLeft" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width: 88%;">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--4-->
-							<div class="row">
-								<div class="mb50">
-									<div class="col-sm-2">
-										<h4 class="mt0">Reactjs</h4>
-									</div>
-									<div class="col-sm-10">
-										<div class="progress">
-											<div class="progress-bar animated slideInLeft" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100" style="width: 82%;">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--5-->
-							<div class="row">
-								<div class="mb50">
-									<div class="col-sm-2">
-										<h4 class="mt0">React Native/ Ionic</h4>
-									</div>
-									<div class="col-sm-10">
-										<div class="progress">
-											<div class="progress-bar animated slideInLeft" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%;">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--6-->
-							<div class="row">
-								<div class="mb50">
-									<div class="col-sm-2">
-										<h4 class="mt0">PHP</h4>
-									</div>
-									<div class="col-sm-10">
-										<div class="progress">
-											<div class="progress-bar animated slideInLeft" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100" style="width: 84%;">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--7-->
-							<div class="row">
-								<div class="mb50">
-									<div class="col-sm-2">
-										<h4 class="mt0">WordPress</h4>
-									</div>
-									<div class="col-sm-10">
-										<div class="progress">
-											<div class="progress-bar animated slideInLeft" role="progressbar" aria-valuenow="81" aria-valuemin="0" aria-valuemax="100" style="width: 81%;">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>							
-							<!--8-->
-							<div class="row">
-								<div class="mb50">
-									<div class="col-sm-2">
-										<h4 class="mt0">UI/UX</h4>
-									</div>
-									<div class="col-sm-10">
-										<div class="progress">
-											<div class="progress-bar animated slideInLeft" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width: 88%;">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>			
-							<!--9-->
-							<div class="row">
-								<div class="mb50">
-									<div class="col-sm-2">
-										<h4 class="mt0">Creative</h4>
-									</div>
-									<div class="col-sm-10">
-										<div class="progress">
-											<div class="progress-bar animated slideInLeft" role="progressbar" aria-valuenow="91" aria-valuemin="0" aria-valuemax="100" style="width: 91%;">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
+							</div>					
 						</div>
 						<!--End of Professional Skill-->
 
@@ -166,7 +53,7 @@
 								<!--1-->
 								<div class="col-sm-4 col-xs-10 col-xs-offset-1   mob_chart">								
 									<circle-progress
-									[percent]="80"
+									[percent]="83"
 									[radius]="15"
 									[outerStrokeWidth]="1"
 									[innerStrokeWidth]="0.15"
@@ -198,7 +85,7 @@
 									[space]="0.6"
 									responsive="true"
 									showTitle="true"					
-									subtitle="Communication Skill"
+									subtitle="UX/UI"
 									[titleFontSize]="5"
 									[subtitleFontSize]="2.5"
 									[unitsFontSize]="5"	
@@ -208,7 +95,7 @@
 								<!--3-->
 								<div class="col-sm-4 col-xs-10 col-xs-offset-1  mob_chart">								
 									<circle-progress
-									[percent]="82"
+									[percent]="85"
 									[radius]="15"
 									[outerStrokeWidth]="1"
 									[innerStrokeWidth]="0.15"
@@ -234,47 +121,20 @@
 						<!--Experience-->
 						<div class="mb40">
 							<h3>Experience</h3>
-							<div class="timeline timeline-left gray-blue">
-								<!--1-->
-								<div class="timeline-block">
+							<div class="timeline timeline-left gray-blue">					
+								<div *ngFor="let item of data.experience" class="timeline-block">
 									<i class="fa fa-suitcase"></i>
 									<div class="timeline-icon"></div>
 									<div class="timeline-content">
-										<h4>WEB AGENCY</h4>
+										<h4>{{item.title}} </h4>
 										<p>
-											Assertively cultivate professional interfaces without synergistic etworks. Quickly erage existing customized ideas through client-based eliverables. Compellingly unleash fully tested outsourcing with prospective tunities. Uniquely maximize client-centric tals rather than focused
+											{{item.description}}
 										</p>
-										<div class="timeline-date">2011-2012
-											<h4 class="system_font_color" title="Hello Developer">Web Developer</h4>
+										<div class="timeline-date">{{item.years}}
+											<h4 class="system_font_color" title="Hello Developer">{{item.area}}</h4>
 										</div>
 									</div>
-								</div>
-								<!--2-->
-								<div class="timeline-block">
-									<div class="timeline-icon"></div>
-									<div class="timeline-content">
-										<h4>GOOGLE INC</h4>
-										<p>
-											Assertively cultivate professional interfaces without synergistic etworks. Quickly erage existing customized ideas through client-based eliverables. Compellingly unleash fully tested outsourcing with prospective tunities. Uniquely maximize client-centric tals rather than focused
-										</p>
-										<div class="timeline-date">2013-2014
-											<h4 class="system_font_color" title="Hello Developer">Web Developer</h4>
-										</div>
-									</div>
-								</div>
-								<!--3-->
-								<div class="timeline-block">
-									<div class="timeline-icon"></div>
-									<div class="timeline-content">
-										<h4>WEB AGENCY</h4>
-										<p>
-											Assertively cultivate professional interfaces without synergistic etworks. Quickly erage existing customized ideas through client-based eliverables. Compellingly unleash fully tested outsourcing with prospective tunities. Uniquely maximize client-centric tals rather than focused
-										</p>
-										<div class="timeline-date">2015-2016
-											<h4 class="system_font_color" title="Hello Developer">Web Developer</h4>
-										</div>
-									</div>
-								</div>
+								</div>						
 							</div>
 						</div>
 						<!--End of Experience-->
@@ -282,51 +142,23 @@
 						<!--Education-->
 						<div class="mb40">
 							<h3>Education</h3>
-							<div class="timeline timeline-left gray-blue">
-								<!--1-->
-								<div class="timeline-block">
+							<div class="timeline timeline-left gray-blue">		
+								<div *ngFor="let item of data.education" class="timeline-block">
 									<i class="fa fa-graduation-cap"></i>
 									<div class="timeline-icon"></div>
 									<div class="timeline-content">
-										<h4>WEB AGENCY</h4>
+										<h4>{{item.title}}</h4>
 										<p>
-											Assertively cultivate professional interfaces without synergistic etworks. Quickly erage existing customized ideas through client-based eliverables. Compellingly unleash fully tested outsourcing with prospective tunities. Uniquely maximize client-centric tals rather than focused
+											{{item.description}} 
 										</p>
-										<div class="timeline-date">2011-2012
-											<h4 class="system_font_color">Web Developer</h4>
+										<div class="timeline-date">{{item.years}}
+											<h4 class="system_font_color">{{item.institute}}</h4>
 										</div>
 									</div>
-								</div>
-								<!--2-->
-								<div class="timeline-block">
-									<div class="timeline-icon"></div>
-									<div class="timeline-content">
-										<h4>GOOGLE INC</h4>
-										<p>
-											Assertively cultivate professional interfaces without synergistic etworks. Quickly erage existing customized ideas through client-based eliverables. Compellingly unleash fully tested outsourcing with prospective tunities. Uniquely maximize client-centric tals rather than focused
-										</p>
-										<div class="timeline-date">2013-2014
-											<h4 class="system_font_color">Web Developer</h4>
-										</div>
-									</div>
-								</div>
-								<!--3-->
-								<div class="timeline-block">
-									<div class="timeline-icon"></div>
-									<div class="timeline-content">
-										<h4>WEB AGENCY</h4>
-										<p>
-											Assertively cultivate professional interfaces without synergistic etworks. Quickly erage existing customized ideas through client-based eliverables. Compellingly unleash fully tested outsourcing with prospective tunities. Uniquely maximize client-centric tals rather than focused
-										</p>
-										<div class="timeline-date">2015-2016
-											<h4 class="system_font_color">Web Developer</h4>
-										</div>
-									</div>
-								</div>
+								</div>						
 							</div>
 						</div>
 						<!--End of Education-->
-
 						<!--Best Quotes Slider-->
 						<div class="mb40">
 							<h3>My Best Quotes</h3>
@@ -335,7 +167,7 @@
 									#slickModal="slick-carousel" 
 									[config]="slideConfig" 			
 									>
-									<ng-container *ngFor="let quote of blockquotes" class="slide">
+									<ng-container *ngFor="let quote of data.blockquotes" class="slide">
 										<div ngxSlickItem >
 											<blockquote>
 												<p>{{quote.text}}</p>
@@ -364,7 +196,7 @@
 							#slickModal="slick-carousel" 
 							[config]="slideConfigTestimonio" 			
 							>
-							<ng-container *ngFor="let quote of testimonio" class="slide">
+							<ng-container *ngFor="let quote of data.testimonio" class="slide">
 								<div ngxSlickItem >
 									<p class="col-sm-10 col-sm-offset-1">{{quote.text}}</p>
 								</div>
@@ -381,7 +213,7 @@
 							#slickModal="slick-carousel" 
 							[config]="slideConfigAvatar " 			
 							>
-							<ng-container *ngFor="let client of avatars" class="slide">
+							<ng-container *ngFor="let client of data.avatars" class="slide">
 								<div ngxSlickItem >
 									<img src="{{client.img}}" alt="{{client.name}}" />
 									<div class="testimonial-user">

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataInformationService } from '../../services/data-information.service';
 import * as $ from 'jquery';
 
 
@@ -10,9 +11,13 @@ import * as $ from 'jquery';
 })
 export class PortfolioComponent implements OnInit {
 
-  constructor() { }
+  public data;
+
+  constructor(private _dataServices: DataInformationService) { }
 
   ngOnInit() {
+    this.data = JSON.parse(localStorage.getItem('portfoliopage'));    
+    console.log(this.data.projects);
   }
   
 

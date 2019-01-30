@@ -40,134 +40,21 @@
 						<!--Portfolio/Project Main Content-->
 						<div id="portfolioContainer" class="portfolioContainer">
 							<!--Portfolio 1-->
-							<div class="col-sm-4 photo grid-item">
+							<div *ngFor="let item of data.projects" class="col-sm-4 photo grid-item">
 								<div class="port_img mb25">
 									<img class="img img-responsive" src="assets/images/portfolio/portfolio1.jpg" alt="Portfolio-1">
 									<div class="port_hover_div">
 										<div class="port_hover_cont">
-											<h3>Graphics Design</h3>
+											<h3>{{item.title}}</h3>
 											<p>This is Photoshop's version</p>
 											<a data-toggle="modal" data-target="#quick_view" class="btn system_btn">Quick View</a>
 											<a routerLink="/portfolio/name-project" class="btn system_btn">Detail View</a>
 										</div>
 									</div>
 								</div>
-							</div>
-							<!--Portfolio 2-->
-							<div class="col-sm-4 app grid-item">
-								<div class="port_img mb25">
-									<img class="img img-responsive" src="assets/images/portfolio/portfolio2.jpg" alt="Portfolio-2">
-									<div class="port_hover_div">
-										<div class="port_hover_cont">
-											<h3>Graphics Design</h3>
-											<p>This is Photoshop's version</p>
-											<a data-toggle="modal" data-target="#quick_view" class="btn system_btn">Quick View</a>
-											<a href="portfolio_details.html" class="btn system_btn">Detail View</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--Portfolio 3-->
-							<div class="col-sm-4 ill grid-item">
-								<div class="port_img mb25">
-									<img class="img img-responsive" src="assets/images/portfolio/portfolio3.jpg" alt="Portfolio-3">
-									<div class="port_hover_div">
-										<div class="port_hover_cont">
-											<h3>Graphics Design</h3>
-											<p>This is Photoshop's version</p>
-											<a data-toggle="modal" data-target="#quick_view" class="btn system_btn">Quick View</a>
-											<a href="portfolio_details.html" class="btn system_btn">Detail View</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--Portfolio 4-->
-							<div class="col-sm-4 web grid-item">
-								<div class="port_img mb25">
-									<img class="img img-responsive" src="assets/images/portfolio/portfolio4.jpg" alt="Portfolio-4">
-									<div class="port_hover_div">
-										<div class="port_hover_cont">
-											<h3>Graphics Design</h3>
-											<p>This is Photoshop's version</p>
-											<a data-toggle="modal" data-target="#quick_view" class="btn system_btn">Quick View</a>
-											<a href="portfolio_details.html" class="btn system_btn">Detail View</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--Portfolio 5-->
-							<div class="col-sm-4 web grid-item">
-								<div class="port_img mb25">
-									<img class="img img-responsive" src="assets/images/portfolio/portfolio5.jpg" alt="Portfolio-5">
-									<div class="port_hover_div">
-										<div class="port_hover_cont">
-											<h3>Graphics Design</h3>
-											<p>This is Photoshop's version</p>
-											<a data-toggle="modal" data-target="#quick_view" class="btn system_btn">Quick View</a>
-											<a href="portfolio_details.html" class="btn system_btn">Detail View</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--Portfolio 6-->
-							<div class="col-sm-4 web grid-item">
-								<div class="port_img mb25">
-									<img class="img img-responsive" src="assets/images/portfolio/portfolio6.jpg" alt="Portfolio-6">
-									<div class="port_hover_div">
-										<div class="port_hover_cont">
-											<h3>Graphics Design</h3>
-											<p>This is Photoshop's version</p>
-											<a data-toggle="modal" data-target="#quick_view" class="btn system_btn">Quick View</a>
-											<a href="portfolio_details.html" class="btn system_btn">Detail View</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--Portfolio 7-->
-							<div class="col-sm-4 app grid-item">
-								<div class="port_img mb25">
-									<img class="img img-responsive" src="assets/images/portfolio/portfolio7.jpg" alt="Portfolio-7">
-									<div class="port_hover_div">
-										<div class="port_hover_cont">
-											<h3>Graphics Design</h3>
-											<p>This is Photoshop's version</p>
-											<a data-toggle="modal" data-target="#quick_view" class="btn system_btn">Quick View</a>
-											<a href="portfolio_details.html" class="btn system_btn">Detail View</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--Portfolio 8-->
-							<div class="col-sm-4 ill grid-item">
-								<div class="port_img mb25">
-									<img class="img img-responsive" src="assets/images/portfolio/portfolio8.jpg" alt="Portfolio-8">
-									<div class="port_hover_div">
-										<div class="port_hover_cont">
-											<h3>Graphics Design</h3>
-											<p>This is Photoshop's version</p>
-											<a data-toggle="modal" data-target="#quick_view" class="btn system_btn">Quick View</a>
-											<a href="portfolio_details.html" class="btn system_btn">Detail View</a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!--Portfolio 9-->
-							<div class="col-sm-4 ill grid-item">
-								<div class="port_img mb25">
-									<img class="img img-responsive" src="assets/images/portfolio/portfolio9.jpg" alt="Portfolio-9">
-									<div class="port_hover_div">
-										<div class="port_hover_cont">
-											<h3>Graphics Design</h3>
-											<p>This is Photoshop's version</p>
-											<a data-toggle="modal" data-target="#quick_view" class="btn system_btn">Quick View</a>
-											<a href="portfolio_details.html" class="btn system_btn">Detail View</a>
-										</div>
-									</div>
-								</div>
-							</div>
+							</div>			
 						</div>
 						<!--End Portfolio/Project Main Content-->
-
 					</div>
 				</div>
 			</div>

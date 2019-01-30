@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { DataInformationService } from '../../services/data-information.service';
 
 @Component({
   selector: 'app-resume',
@@ -8,54 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumeComponent implements OnInit {
 
-  constructor() { }
+  public data;
 
-  slides = [
-    {img: "http://placehold.it/350x150/000000"},
-    {img: "http://placehold.it/350x150/111111"},
-    {img: "http://placehold.it/350x150/333333"},
-    {img: "http://placehold.it/350x150/666666"}
-  ];
+  constructor(private _dataServices: DataInformationService) { }
 
-  blockquotes = [
-    {text: "Lorem Ipsum is simply dummy text of the printing and typesetting industry."},
-    {text: "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"},
-    {text: "Esta aplicación es lo más duro que ha pasado por aqui"}
-  ]
-
-  testimonio = [
-    {text: "1. Lorem Ipsum is simply dummy text of the printing and typesetting industry."},
-    {text: "2. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"},
-    {text: "3. Esta aplicación es lo más duro que ha pasado por aqui"},
-    {text: "4. Esta aplicación es lo más duro que ha pasado por aqui"},
-  ]
-
-  avatars = [
-    {
-      img: "assets/images/resume_slider1.png",
-      name: 'Carlos Tolentino',
-      company: 'CTolenk',
-      role: 'CEO'      
-    },
-    {
-      img: "assets/images/resume_slider2.png",
-      name: 'Nicolas Pineda',
-      company: 'Nico Multimedia',
-      role: 'CEO'      
-    },
-    {
-      img: "assets/images/resume_slider3.png",
-      name: 'Paola Lazala',
-      company: 'Lazala Studio',
-      role: 'CEO'      
-    },
-    {
-      img: "assets/images/resume_slider4.png",
-      name: 'Eliezer Tavárez',
-      company: 'Control Diamante',
-      role: 'COO'      
-    },
-  ]
 
   slideConfig = {
       "slidesToShow": 1, 
@@ -116,8 +72,7 @@ export class ResumeComponent implements OnInit {
 
 
   ngOnInit() {
-
-    
+    this.data = JSON.parse(localStorage.getItem('resumepage'));    
   }
 
 }

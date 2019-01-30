@@ -17,14 +17,18 @@ export class DataInformationService {
   constructor(private _http: HttpClient, db: AngularFireDatabase) {
      db.object('homePage').valueChanges().subscribe((data)=>{
       this.setInformationLocal(data, 'homepage');
-    })
+     });
+     db.object('resumePage').valueChanges().subscribe((data)=>{    
+      this.setInformationLocal(data, 'resumepage');
+     });
+     db.object('portfolioPage').valueChanges().subscribe((data)=>{    
+      this.setInformationLocal(data, 'portfoliopage');
+     });
    
   }
 
   setInformationLocal(data, label){
-    console.log("Grabando");
-    localStorage.setItem(label, JSON.stringify(data));
-    
+    localStorage.setItem(label, JSON.stringify(data));    
   }
 
 
