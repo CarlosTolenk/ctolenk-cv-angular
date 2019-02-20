@@ -14,13 +14,14 @@ export class PortfolioComponent implements OnInit {
   public data;
   public filterData;
   public selected:String
+  public projectSeleted;
 
   constructor(private _dataServices: DataInformationService) { }
 
   ngOnInit() {
     this.data = JSON.parse(localStorage.getItem('portfoliopage'));    
     this.filterData = this.data.projects;
-    this.selected = 'ALL'
+    this.selected = 'ALL';  
   }
 
   onChangeFilter(filter){
@@ -29,9 +30,12 @@ export class PortfolioComponent implements OnInit {
     }else{
       this.filterData = this.data.projects.filter(word => word.category == filter)
     }
+    this.selected = filter;    
+  }
 
-    this.selected = filter;
-    
+  onChangeSelected(target){
+    this.projectSeleted = target;
+    console.log(this.projectSeleted);
   }
   
 

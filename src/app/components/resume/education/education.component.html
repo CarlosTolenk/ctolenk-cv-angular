@@ -1,0 +1,18 @@
+<div class="mb40">
+    <h3>Education</h3>
+    <div class="timeline timeline-left gray-blue">		
+      <div *ngFor="let item of education" class="timeline-block">
+        <i class="fa fa-graduation-cap"></i>
+        <div class="timeline-icon"></div>
+        <div class="timeline-content">
+          <h4>{{item.title}}</h4>
+          <p>
+            {{item.description}} 
+          </p>
+          <div class="timeline-date">{{item.years}}
+            <h4 class="system_font_color">{{item.institute}}</h4>
+          </div>
+        </div>
+      </div>						
+    </div>
+</div>

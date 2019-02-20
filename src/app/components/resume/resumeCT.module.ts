@@ -12,6 +12,9 @@ import { ResumeComponent } from './resume.component';
 
 //Declaration Rutes
 import { ResumeRoutes } from './resumeCT.routing';
+import { EducationComponent } from './education/education.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ProfessionalSkillComponent } from './professional-skill/professional-skill.component';
 
 @NgModule({
   imports: [
@@ -23,7 +26,10 @@ import { ResumeRoutes } from './resumeCT.routing';
     RouterModule.forChild(ResumeRoutes)
   ],
   declarations: [
-    ResumeComponent   
+    ResumeComponent,
+    EducationComponent,
+    ExperienceComponent,
+    ProfessionalSkillComponent   
   ]  
 })
 export class ResumeCTModule { }

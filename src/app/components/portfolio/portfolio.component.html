@@ -48,7 +48,7 @@
 											<div class="port_hover_cont">
 												<h3>{{item.title}}</h3>
 												<p>{{item.subtitle}}</p>
-												<a data-toggle="modal" data-target="#quick_view" class="btn system_btn">Quick View</a>
+												<a data-toggle="modal" data-target="#quick_view" (click)=onChangeSelected(item) class="btn system_btn">Quick View</a>
 												<a routerLink="/portfolio/name-project" class="btn system_btn">Detail View</a>
 											</div>
 										</div>
@@ -72,47 +72,30 @@
 
 
 <!-- Quick Showcase of Portfolio/Project -->
-<div class="modal fade" id="quick_view">
+<div *ngIf="projectSeleted" class="modal fade" id="quick_view">
 	<div class="modal-dialog modal-lg">
 
 		<!-- Modal content-->
 		<div class="modal-content">
 			<div class="modal-header">
 				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Appestia - SPA landing page</h4>
+				<h4 class="modal-title">{{projectSeleted.title}} - {{projectSeleted.subtitle}}</h4>
 			</div>
 			<div class="modal-body">
 				<div class="portfolio_modal_body">
-					<h5 class="mb20">FEBRUARY,2018</h5>
+					<h5 class="mb20">{{projectSeleted.date}}</h5>					
+
+					<p class="mb20">{{projectSeleted.description}}
+						<a routerLink="/portfolio/name-project" target="_blank">   more ...</a>
+					</p>			
 
 					<h5 class="mb20">
-						<span>Web Devlopment</span> in
-						<span>Bootstrap, HTML, CSS, Angular, Nodejs</span>
+						<span>Devlopment</span> in
+						<span > </span>
 					</h5>
 
-					<p class="mb20">Assertively cultivate professional interfaces without synergistic etworks. Quickly erage existing customized ideas through client-based eliverables. Compellingly unleash fully tested outsourcing with prospective tunities. Uniquely maximize client-centric tals rather than focused web-readiness. Intrinsicly monetize reliable interfaces rather than multimedia based experiences. synergistic networks
-						<a routerLink="/portfolio/name-project" target="_blank">   more ...</a>
-					</p>
-					<!-- <div class="mb20">
-						<a href="https://themeforest.net/user/phoenixcoded" target="_blank">https://themeforest.net/user/phoenixcoded/</a>
-					</div> -->
-					<!-- <div class="mb20">
-						<a href="portfolio2.html#">
-							<img class="img img-responsive" src="assets/images/tweet.png" alt="Tweet">
-						</a>
-						<a href="portfolio2.html#">
-							<img class="img img-responsive" src="assets/images/fb_like.png" alt="FB">
-						</a>
-						<a href="portfolio2.html#">
-							<img class="img img-responsive" src="assets/images/pinit.png" alt="Pinit">
-						</a>
-					</div> -->
 					<div class="port_tags">
-						<a href="portfolio2.html#" class="btn system_btn">Coading</a>
-						<a href="portfolio2.html#" class="btn system_btn">Inventory System</a>
-						<a href="portfolio2.html#" class="btn system_btn">Nodejs</a>
-						<a href="portfolio2.html#" class="btn system_btn">Angular</a>
-						<a href="portfolio2.html#" class="btn system_btn">Bootstrap</a>
+						<a *ngFor="let tech of projectSeleted.technology" class="btn system_btn">{{tech}}</a>					
 					</div>
 
 				</div>

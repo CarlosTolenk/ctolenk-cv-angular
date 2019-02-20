@@ -1,0 +1,97 @@
+	<!--Professional skill-->
+  <div class="mb40">
+    <h3>Professional Skill</h3>
+    <br>
+    <!-- For -->
+    <div *ngFor="let item of skills" class="row">
+      <div class="mb50">
+        <div class="col-sm-2">
+          <h4 class="mt0">{{item.name}}</h4>
+        </div>
+        <div class="col-sm-10">
+          <div class="progress">
+            <div class="progress-bar animated slideInLeft" role="progressbar" aria-valuenow="item.number" aria-valuemin="0" aria-valuemax="100" [ngStyle]="{'width': item.number +'%'}">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>					
+  </div>
+  <!--End of Professional Skill-->
+
+
+
+
+  <!--Additional skill-->
+<div class="mb40">
+    <h3>Additional Skill</h3>
+    <div class="row text-center mb60 circle-progress-container">
+      <!--1-->
+      <div class="col-md-3 col-xs-9 col-xs-offset-1  mob_chart">								
+        <circle-progress
+        [percent]="83"
+        [radius]="15"
+        [outerStrokeWidth]="1"
+        [innerStrokeWidth]="0.15"
+        [outerStrokeColor]="'#e21e34'"
+        [innerStrokeColor]="'#0487cc'"
+        [animation]="true"
+        [animationDuration]="1300"
+        [space]="0.6"
+        responsive="true"
+        showTitle="true"					
+        subtitle="Project Manager"
+        [titleFontSize]="5"
+        [subtitleFontSize]="2.5"
+        [unitsFontSize]="5"	
+        class="circle-progress-ng"
+        ></circle-progress>								
+      </div>
+      <!--2-->
+      <div class="col-md-3 col-xs-9 col-xs-offset-1  mob_chart">								
+        <circle-progress
+        [percent]="87"
+        [radius]="15"
+        [outerStrokeWidth]="1"
+        [innerStrokeWidth]="0.15"
+        [outerStrokeColor]="'#e21e34'"
+        [innerStrokeColor]="'#0487cc'"
+        [animation]="true"
+        [animationDuration]="1300"
+        [space]="0.6"
+        responsive="true"
+        showTitle="true"					
+        subtitle="UX/UI"
+        [titleFontSize]="5"
+        [subtitleFontSize]="2.5"
+        [unitsFontSize]="5"	
+        class="circle-progress-ng"
+        ></circle-progress>								
+      </div>
+      <!--3-->
+      <div class="col-md-3 col-xs-9 col-xs-offset-1  mob_chart">								
+        <circle-progress
+        [percent]="85"
+        [radius]="15"
+        [outerStrokeWidth]="1"
+        [innerStrokeWidth]="0.15"
+        [outerStrokeColor]="'#e21e34'"
+        [innerStrokeColor]="'#0487cc'"
+        [animation]="true"
+        [animationDuration]="1300"
+        [space]="0.6"
+        responsive="true"
+        showTitle="true"					
+        subtitle="Creative"
+        [titleFontSize]="5"
+        [subtitleFontSize]="2.5"
+        [unitsFontSize]="5"	
+        class="circle-progress-ng"
+        ></circle-progress>								
+      </div>
+    </div>
+  </div>
+  <!--End of Additional Skill-->
+
+
+
