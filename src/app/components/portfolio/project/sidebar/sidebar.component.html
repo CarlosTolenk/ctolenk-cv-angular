@@ -1,0 +1,67 @@
+
+  <div class="col-sm-4 ">
+    <!--Search-->
+    <!-- <div class="input-group search_btn">
+      <input type="text" class="form-control" placeholder="Search for...">
+      <span class="input-group-btn">
+        <button class="btn btn-secondary" type="button">
+          <i class="fa fa-search"></i>
+        </button>
+      </span>
+    </div> -->
+
+
+    <!--Categories-->
+    <div class="port_detail_next_search">
+      <h4 class="system_font_color mtb-40">Categories</h4>
+      <h5>
+        <a (click)="goToCategory('WEB')">
+          Web Desing
+          <i class="fa fa-angle-right pull-right"></i>
+        </a>
+      </h5>
+      <h5>
+        <a routerLink="/portfolio">
+          Web Application
+          <i class="fa fa-angle-right pull-right"></i>
+        </a>
+      </h5>
+      <h5>
+        <a routerLink="/portfolio">
+          Mobile Application
+          <i class="fa fa-angle-right pull-right"></i>
+        </a>
+      </h5>
+      
+    </div>
+    <!--Recent posts-->
+    <div>
+      <h4 class="system_font_color mtb-40">Featured Projects</h4>
+      <div *ngFor="let item of recentPublish" class="row recent_post">
+        <a href="portfolio_details.html#" target="_blank">
+          <div class="col-sm-4">
+            <img class="img img-responsive" src="{{item.promo}}" alt="Post">
+          </div>
+          <div class="col-sm-8">
+            <h5>{{item.title}}</h5>
+            <h5>{{item.date}}</h5>
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+
+
+    <!--Tags-->
+    <!-- <div class="port_tags">
+      <h4 class="system_font_color mtb-40">Tags</h4>
+      <a href="portfolio_details.html#" class="btn system_btn">Coading</a>
+      <a href="portfolio_details.html#" class="btn system_btn">Inventory System</a>
+      <a href="portfolio_details.html#" class="btn system_btn">Single Page Application</a>
+      <a href="portfolio_details.html#" class="btn system_btn">CRM</a>
+      <a href="portfolio_details.html#" class="btn system_btn">CMS</a>
+      <a href="portfolio_details.html#" class="btn system_btn">ERP</a>
+    </div> -->
+
+  </div>

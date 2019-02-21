@@ -15,7 +15,7 @@
 							<h1 class="title">My <span class="bolder">Portfolio</span> </h1>
 							<p class="mb40">
 								{{data.description}}
-								<br/><br/><strong>Hover on any portfolio/project to check out <a href="portfolio2.html" style="color:#0487cc; font-weight: 700">Quick view</a> action</strong>
+								<br/><br/><strong>Hover on any portfolio/project to check out <span style="color:#0487cc; font-weight: 700">Quick view</span> action</strong>
 							</p>
 						</div>
 					</div>
@@ -49,7 +49,7 @@
 												<h3>{{item.title}}</h3>
 												<p>{{item.subtitle}}</p>
 												<a data-toggle="modal" data-target="#quick_view" (click)=onChangeSelected(item) class="btn system_btn">Quick View</a>
-												<a routerLink="/portfolio/name-project" class="btn system_btn">Detail View</a>
+												<a (click)="goToProject(item)" class="btn system_btn">Detail View</a>
 											</div>
 										</div>
 									</div>
@@ -90,7 +90,7 @@
 					</p>			
 
 					<h5 class="mb20">
-						<span>Devlopment</span> in
+						<span>Development</span> in {{projectSeleted.develoment}}
 						<span > </span>
 					</h5>
 

@@ -1,0 +1,38 @@
+<div class="port_details_all_img">
+  <div class="row">
+    <div class="col-sm-12">
+      <div id="big_banner">
+        <div class="port_big_img">
+
+          <ngx-slick-carousel class="carousel slider-for" 
+            #slickModal="slick-carousel" 
+            [config]="slideConfigProject" 			
+            >
+            <ng-container *ngFor="let project of projectBig" class="slide">
+              <div ngxSlickItem >
+                  <img class="img img-responsive mt20" src="{{project.img}}" alt="Big_ Details">
+                  <div class="port_detail_title">{{project.title}}</div>
+              </div>
+            </ng-container>
+          </ngx-slick-carousel>											
+        </div>								
+      </div>
+    </div>
+  </div>
+  <div class="row mt20">
+    <div class="col-sm-12">		
+      <div>
+      <ngx-slick-carousel class="carousel  slider-nav " 
+        #slickModal="slick-carousel" 
+        [config]="slideConfigProjectAvatar " 			
+        >
+        <ng-container *ngFor="let project of projectSmall" class="slide">
+          <div ngxSlickItem >
+              <img class="img img-responsive" src="{{project}}" alt="small-details" >
+          </div>
+        </ng-container>
+      </ngx-slick-carousel>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-sm-12">
+    <h3>Client Review</h3>
+    <div id="review">
+      <div>
+        <ngx-slick-carousel class="carousel" 
+          #slickModal="slick-carousel" 
+          [config]="slideConfig" 			
+          >
+          <ng-container *ngFor="let quote of blockquotes" class="slide">
+            <div ngxSlickItem >
+              <blockquote>
+                <p>{{quote.text}}</p>
+              </blockquote>
+              <div class="text-center mt20 mb20">
+                <h5 class="text-uppercase system_font_color">{{quote.name}}</h5>
+                <h6>{{quote.company}}.</h6>
+                <span class="system_span">{{quote.date}}</span>
+              </div>
+            </div>
+          </ng-container>
+        </ngx-slick-carousel>										
+      </div>						
+    </div>
+  </div>
+</div>  

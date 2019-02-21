@@ -1,0 +1,80 @@
+			<!-- Description -->
+      <div class="row">
+        <div class="col-sm-12">
+          <p class="mb40">
+           {{descriptions.first}}
+            <br><br>
+           {{descriptions.second}}
+          </p>
+        </div>
+
+        <div *ngIf="urlProject" class="mb40 col-sm-12 col-md-8">
+          <span class="port_detail_url">
+            URL :
+            <a href="{{urlProject}}" target="_blak">{{urlProject}}</a>										
+          </span>
+        </div>
+      
+      </div>
+      <!-- En Description -->
+
+      <!-- Technology -->
+      <div class="row">
+        <!--Source-->
+        <div class="col-sm-6 col-xs-12">
+          <h3>Technology Used</h3>
+          <ul class="port_source pl20">
+            <li *ngFor="let item of technology"><h4>{{item}}</h4></li>      
+          </ul>
+        </div>
+        <!--Technology used-->
+        <div class="col-sm-6 col-xs-12">
+          <h3>Setting Used</h3>
+          <ul class="pl0">
+            <li *ngFor="let item of settings; let i = index" class="port_tech_item">
+              <div class="divider">
+                <span [className]="'port_icon1'"></span>
+                <h4>{{item.title}}</h4>
+                <p>{{item.subtitle}}</p>
+              </div>
+            </li>       
+          </ul>
+        </div>
+      </div>
+      <!-- End Technology  -->
+
+      <!--Duration-->
+      <div id="port_chart" class="text-center mb40">
+        <div class="row">
+          <div class="col-sm-12">
+            <h3 class="text-left">Time Duration</h3>
+
+            <div *ngFor="let item of duration" class="col-sm-4 col-xs-8 col-xs-push-2 mob_chart">
+              <circle-progress
+              [percent]="item.percent"
+              [radius]="15"
+              [outerStrokeWidth]="1"
+              [innerStrokeWidth]="0.15"
+              [outerStrokeColor]="'#e21e34'"
+              [innerStrokeColor]="'#0487cc'"
+              [animation]="true"
+              [animationDuration]="3500"
+              [space]="0.6"
+              responsive="true"
+              showTitle="true"					
+              subtitle="{{item.unit}}"
+              [titleFontSize]="6"
+              [subtitleFontSize]="3.5"
+              [unitsFontSize]="0.1"	
+              class="circle-progress-ng"
+              ></circle-progress>	
+              <div class="text-center">
+                <h5 class="mb20">{{item.title}}</h5>
+                <p>{{item.description}} </p>
+              </div>
+            </div>   
+
+          </div>
+        </div>
+      </div>
+      <!--End Duration-->
