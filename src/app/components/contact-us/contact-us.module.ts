@@ -2,7 +2,6 @@ import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-
 // import the new component
 import { ContactUsComponent } from './contact-us.component';
 
@@ -15,7 +14,7 @@ const appRoutes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,    
+    FormsModule, 
     RouterModule.forChild(appRoutes)   
   ],
   declarations: [

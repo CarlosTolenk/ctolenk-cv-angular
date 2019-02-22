@@ -24,6 +24,9 @@ export class DataInformationService {
      db.object('portfolioPage').valueChanges().subscribe((data)=>{    
       this.setInformationLocal(data, 'portfoliopage');
      });
+     db.object('contactPage').valueChanges().subscribe((data)=>{    
+      this.setInformationLocal(data, 'contactPage');
+     });
    
   }
 
