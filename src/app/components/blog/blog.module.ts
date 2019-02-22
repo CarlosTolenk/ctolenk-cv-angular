@@ -10,10 +10,12 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 // import the new component
 import { BlogComponent } from './blog.component';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
+import { ConstruccionComponent } from '../construccion/construccion.component';
 
 //Declaration Rutes
 const appRoutes: Routes = [
-    { path: 'blog', component: BlogComponent },  
+    // { path: 'blog', component: BlogComponent },  
+    { path: 'blog', component: ConstruccionComponent },      
     { path: 'blog/:name' , component: BlogDetailComponent }
 ];
 
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
   ],
   declarations: [
     BlogComponent,
-    BlogDetailComponent    
+    BlogDetailComponent,
+    ConstruccionComponent    
   ]
   
 })

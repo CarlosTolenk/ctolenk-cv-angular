@@ -32,6 +32,8 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { SweetAlert2Module } from '@toverux/ngx-sweetalert2';
+
 
 
 
@@ -45,7 +47,8 @@ import { environment } from '../environments/environment';
     MenuComponent,
     FooterComponent, 
     NotFoundComponent,
-    LayoutComponent,  
+    LayoutComponent,
+
    
   ],
   imports: [
@@ -60,6 +63,7 @@ import { environment } from '../environments/environment';
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
     AngularFireStorageModule, // imports firebase/storage only needed for storage features
     AngularFireDatabaseModule,
+    SweetAlert2Module.forRoot(),
 
      // Specify ng-circle-progress as an import
      NgCircleProgressModule.forRoot({

@@ -13,7 +13,7 @@
 				<!--Intro-->
 				<h1 class="title">Contact <span class="bolder">Me</span></h1>
 				<p class="mb40">
-					Assertively cultivate professional interfaces without synergistic etworks. Quickly erage existing customized ideas through client-based eliverables. Compellingly unleash fully tested outsourcing with prospective tunities. Uniquely maximize client-centric tals rather than focused web-readiness. Intrinsicly monetize reliable interfaces rather than multimedia based experiences. synergistic networks. Quickly rather than multimedia based Collaboratively synergize economically sound process improvements with functionalized e-commerce.
+				  {{info.description}}
 				</p>
 				<!--End Intro-->
 
@@ -22,67 +22,64 @@
 					<div class="col-sm-12">
 						<h3>Keep in Touch</h3>
 						<div class="cont_info">						
-							<h5>
-								<strong>Email: </strong>					
-								<span>carlos.tolentinoe@ctolenk.com</span>
+							<h5 *ngFor="let item of info.contact">
+								<strong>{{item.label}}: </strong>					
+								<span>{{item.title}}</span>
 							</h5>
-							<h5 >
-								<strong>Skype: </strong>
-								<span>carlos_tolentino23</span>
-							</h5>
-							<h5 >
-								<strong>Phone: </strong>
-								<span>+1 (829) 264-0093</span>
-							</h5>
-							<h5 class="mb30">
-								<strong>Country: </strong>
-								<span>Dominican Republic</span>
-							</h5>
-					
-
 						</div>
+						<br>
 
 						<h3>Social Networks</h3>
-						<div class="social-network">
-							<a href="https://www.facebook.com/CTolenk-Carlos-Tolentino-319545492220924/" target="_blank"><i class="fa fa-facebook"></i></a>  
-							<a href="https://twitter.com/CarlosTolenk" target="_blank"><i class="fa fa-twitter"></i></a>  
-							<a href="https://www.instagram.com/ctolenk/" target="_blank"><i class="fa fa-instagram"></i></a>  
-							<a href="https://www.linkedin.com/in/ctolenk/" target="_blank"><i class="fa fa-linkedin"></i></a>  
-							<a href="https://github.com/CarlosTolenk" target="_blank"><i class="fa fa-github"></i></a>  
+						<div class="social-network">						
+							<a *ngFor="let item of info.social_network" href="{{item.url}}" target="_blank"><i [class]="item.class"></i></a>  
+
 						</div>
 
 						<h3>We are waiting to Assist you</h3>
 						<p class="mb30">
 							You can contact me by means of an electronic message for any type of questions or quotes.
 						</p>
-						<h6 class="system_font_color mb30">Simply use the form below to get in touch</h6>
+						<h6 id="contact-form-template" class="system_font_color mb30">Simply use the form below to get in touch</h6>
 						<form class="form-horizontal">
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input [(ngModel)]="data.name" name="name"  type="text" class="form-control" id="first_name"  placeholder="Your Name" required>
+									<input [(ngModel)]="data.name" name="name"  type="text" class="form-control" id="first_name"  placeholder="Your Name" >
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input [(ngModel)]="data.email_address" name="email_address" type="email" class="form-control" id="contact_email" placeholder="Email Address" required>
+									<input [(ngModel)]="data.email_address" name="email_address" type="email" class="form-control" id="contact_email" placeholder="Email Address" >
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<input [(ngModel)]="data.subject" name="subject" type="text" class="form-control" id="subject" placeholder="Subject" required>
+									<input [(ngModel)]="data.subject" name="subject" type="text" class="form-control" id="subject" placeholder="Subject" >
 								</div>
 							</div>
 							<div class="form-group">
 								<div class="col-sm-12">
-									<textarea [(ngModel)]="data.message" name="message" class="form-control" rows="4" cols="50" id="contact_message" placeholder="Message" required></textarea>
+									<textarea [(ngModel)]="data.message" name="message" class="form-control" rows="4" cols="50" id="contact_message" placeholder="Message" ></textarea>
 								</div>
 							</div>
 							<div class="mob_center">
-								<button [disabled]=false (click)="proccessData()" id="submit-form" class="btn system_btn submit-form">Send Message</button>
+								<button [disabled]=false (click)="sendEmail()" id="submit-form" class="btn system_btn submit-form">Send Message</button>
 								<br><br>
 							</div>
 						</form>
 					</div>
+
+
+					<swal
+						#deleteSwal
+						title="Delete?"
+						text="This cannot be undone"
+						type="question"
+						[showCancelButton]="true"
+						[focusCancel]="true"
+						>
+				  </swal>
+
+
 				
 				</div>
 				<!--End Main Content-->
@@ -94,7 +91,13 @@
 	</section>
 	<!--End Inner Main Section-->
 
+
 </main>
 <!--End Main-->
 
 </div>
+
+
+
+
+

@@ -1,0 +1,36 @@
+
+.container-img-contruction{
+    display: flex;
+    justify-content: flex-start;
+    justify-items: center;
+    margin-top: 5rem;
+}
+
+.img-contruction{
+    width: 100%;
+    height: 155%;
+}
+
+@media only screen and (min-width: 600px) {
+    .container-img-contruction{
+        margin-top: 10rem;
+        justify-content: center;
+    }
+
+    .img-contruction{
+        width: 90%;
+        height: 155%;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .container-img-contruction{
+        margin-top: 10rem;
+        justify-content: center;
+    }
+
+    .img-contruction{
+        width: 80%;
+        height: 155%;
+    }
+}

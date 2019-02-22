@@ -5,6 +5,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LayoutComponent } from './components/layout/layout.component';
 
 
+
 export const Approutes: Routes = [
   {
     path: '',
@@ -27,7 +28,8 @@ export const Approutes: Routes = [
       { path: '', loadChildren: './components/home/home.module#HomeModule'}    
     ] 
   },
-  
+
+
   { path: '**', component: NotFoundComponent }
   
 ];

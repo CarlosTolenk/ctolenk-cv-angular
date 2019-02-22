@@ -7,7 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NotFoundComponent implements OnInit {
 
-  constructor() { }
+  public info;
+
+  constructor() {
+    this.info = JSON.parse(localStorage.getItem('contactPage')); 
+   }
 
   ngOnInit() {
   }

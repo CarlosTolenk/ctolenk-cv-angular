@@ -12,8 +12,5 @@ export class LayoutComponent implements OnInit {
   ngOnInit() {
   }
 
-  onClicK(){
-    console.log('click')
-  }
 
 }
