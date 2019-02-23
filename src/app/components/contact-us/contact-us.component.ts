@@ -64,6 +64,14 @@ export class ContactUsComponent implements OnInit {
         })
         .then(response =>  swal('Message sent correctly!!', 'Your email has been processed correctly in a maximum of 48hr you will be contacted by our technical team.', 'success'))
         .catch(error => swal('Oh, this is a mistake!!', error.message, 'error'))
+
+
+        this.data = {
+          name: '',
+          email_address: '',
+          subject: '',
+          message: ''
+        }
         
  
     }else{
