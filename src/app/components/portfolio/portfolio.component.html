@@ -35,7 +35,7 @@
 					</div>
 				</div>
 				<!--End Portfolio/Project Main Categories-->
-				<div class="animated fadeIn">
+				<div *ngIf="easeToggle" class="animated" [ngClass]="classAnimated"> 
 					<div class="row">
 						<div class="grid">
 							<!--Portfolio/Project Main Content-->

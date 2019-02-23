@@ -5,14 +5,15 @@
       <i class="fa fa-suitcase"></i>
       <div class="timeline-icon"></div>
       <div class="timeline-content">
-        <h4>{{item.title}} </h4>
-        <p>
-          {{item.description}}
-        </p>
-        <div class="timeline-date">{{item.years}}
-          <h4 class="system_font_color" title="Hello Developer">{{item.area}}</h4>
+          <div *ngFor="let element of item.description" class="pb-5">
+              <h4>{{element.title}}</h4>    
+              <h5 class="mb-15"><b >{{element.company}}</b></h5>         
+              <p class="text-justify">{{element.detail}}</p>                
+          </div>           
+          <div class="timeline-date">{{item.years}}
+            <h4 class="system_font_color">{{item.company}}</h4>
+          </div>
         </div>
-      </div>
     </div>						
   </div>
 </div>

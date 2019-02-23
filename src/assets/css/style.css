@@ -1159,8 +1159,10 @@ blockquote{
     max-width: 140px;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    cursor: pointer;
+    white-space: wrap;
+    text-align: right;
+    margin-bottom: 1rem;
+    cursor: pointer;    
 }
 
 /*====== Resume Page css ends ======= */

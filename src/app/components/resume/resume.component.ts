@@ -73,6 +73,7 @@ export class ResumeComponent implements OnInit {
 
   ngOnInit() {
     this.data = JSON.parse(localStorage.getItem('resumepage'));    
+    console.log(this.data);
   }
 
 }

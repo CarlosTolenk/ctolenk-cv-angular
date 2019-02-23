@@ -8,7 +8,7 @@ import { Router } from '@angular/router';
 })
 export class SidebarComponent implements OnInit {
 
-  @Input()titleProject;
+  @Input() titleProject;
 
   public data;
   public recent:Array<any>=[]
@@ -21,9 +21,11 @@ export class SidebarComponent implements OnInit {
    }
 
   ngOnInit() { 
+    console.log("Iniciando el sidebar");
     this.data.projects.filter((element) => {
       if(element.title != this.titleProject){
         this.recent.push(element);
+        console.log(this.recent);
       }     
     });
     for(let i=0; i<this.recent.length; i++){

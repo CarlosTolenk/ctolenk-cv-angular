@@ -16,6 +16,8 @@ export class PortfolioComponent implements OnInit {
   public filterData;
   public selected:String
   public projectSeleted;
+  public easeToggle:boolean = true;
+  public classAnimated:string = 'zoomInUp';
 
   constructor(
     private _dataServices: DataInformationService,
@@ -41,12 +43,43 @@ export class PortfolioComponent implements OnInit {
   }
 
   onChangeFilter(filter){
+    this.easeToggle=false;
     if(filter == 'ALL'){
       this.filterData = this.data.projects;
     }else{
       this.filterData = this.data.projects.filter(word => word.category == filter)
     }
-    this.selected = filter;    
+    this.selected = filter;  
+ 
+    this.onEffect();
+  
+  }
+
+  onEffect(){
+    let selectedAnimate = Math.floor(Math.random() * 10) + 1 ;
+
+    switch(selectedAnimate){
+      case 1: this.classAnimated = 'fadeInDown'; break;
+      case 2: this.classAnimated = 'fadeInLeft'; break;
+      case 3: this.classAnimated = 'bounceIn'; break;
+      case 4: this.classAnimated = 'rotateInDownLeft'; break;
+      case 5: this.classAnimated = 'flipInY'; break;
+      case 6: this.classAnimated = 'bounceInUp'; break;
+      case 7: this.classAnimated = 'slideInUp'; break;
+      case 8: this.classAnimated = 'slideInLeft'; break;
+      case 9: this.classAnimated = 'zoomInRight'; break;
+      case 10: this.classAnimated = 'jackInTheBox'; break;
+    }
+    console.log(this.classAnimated);
+
+
+
+
+    setInterval(()=>{
+      this.easeToggle=true;     
+    }, 0)
+
+  
   }
 
   onChangeSelected(target){
