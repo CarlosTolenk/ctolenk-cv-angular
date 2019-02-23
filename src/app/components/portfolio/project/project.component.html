@@ -1,4 +1,4 @@
-<div class="animated  fadeInDown ">
+<div *ngIf="!toogleData"  class="animated fadeInDown ">
 
 <!--Main-->
 <main class="cd-main">
@@ -22,11 +22,11 @@
 						<span class="portfolio_date mb20">{{data.date}}</span>
 
 						<!--Slideshow-->
-						<app-slideshow [projectBig]=data.img.big [projectSmall]="data.img.small"></app-slideshow>
-						<!--End Slideshow-->
+						<app-slideshow [projectBig]=data.img.big [projectSmall]="data.img.small" ></app-slideshow>
+						<!--End Slideshow-->  
 
 						<!-- Details Project -->
-						<app-tech
+						<app-tech 
 							[technology]="data.technology"
 							[settings]="data.setting"
 							[descriptions]="data.descriptionLong"	
@@ -37,7 +37,7 @@
 						<!-- End Details Project -->
 
 						<!--Review-->
-						<app-review
+						<app-review 
 							[blockquotes]="data.blockquotes"
 						></app-review> 
 						<!--End Review-->

@@ -16,21 +16,19 @@ export class SidebarComponent implements OnInit {
   // public recent;
 
 
-  constructor( private router: Router,) {
+  constructor( private router: Router) {
     this.data = JSON.parse(localStorage.getItem('portfoliopage')); 
    }
 
   ngOnInit() { 
-    console.log("Iniciando el sidebar");
     this.data.projects.filter((element) => {
       if(element.title != this.titleProject){
-        this.recent.push(element);
-        console.log(this.recent);
+        this.recent.push(element);   
       }     
     });
     for(let i=0; i<this.recent.length; i++){
       this.recentPublish.push(this.recent[i]);
-      if(i == 3){
+      if(i == 4){
         break;
       }
     }
@@ -39,6 +37,18 @@ export class SidebarComponent implements OnInit {
   goToCategory(selected){
     this.router.navigate([`/portfolio`]);
     localStorage.setItem('categorySelected', JSON.stringify(selected));      
+  }
+
+  goToProject(selected){    
+    let title = selected.title.toLowerCase();
+    title = title.replace(' ','-');
+    title = title.replace(' ','-');      
+    // localStorage.setItem('projectSelectedNew', JSON.stringify(selected));  
+    localStorage.setItem('projectSelected', JSON.stringify(selected));  
+    localStorage.setItem('blog_project', 'true');
+    // this.router.navigate([`/portfolio/${title}`]);
+    this.router.navigate([`/blog`]);
+
   }
 
 }

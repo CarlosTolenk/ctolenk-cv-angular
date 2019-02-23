@@ -26,10 +26,10 @@
 				<div class="port-tab">
 					<div class="portfolio_filters_group">
 						<ul id="portfolioFilter" class="portfolioFilter text-center">
-							<li><button (click)="onChangeFilter('ALL')" [ngClass]="{'current': selected != 'ALL' }" class="btn portfolio_btn system_btn mobile_tabs">All</button></li>
-							<li><button (click)="onChangeFilter('WEB')" [ngClass]="{'current': selected != 'WEB' }" class="btn portfolio_btn system_btn mobile_tabs ">Web Design</button></li>
-							<li><button (click)="onChangeFilter('MOBILE')" [ngClass]="{'current': selected != 'MOBILE' }" class="btn portfolio_btn system_btn mobile_tabs">Web Application</button></li>
-							<li><button (click)="onChangeFilter('UI/UX')" [ngClass]="{'current': selected != 'UI/UX' }" class="btn portfolio_btn system_btn mobile_tabs">Mobile Application</button></li>		
+							<li><button (click)="onChangeFilter('ALL')" [ngClass]="{'current': selected !== 'ALL' }" class="btn portfolio_btn system_btn mobile_tabs">All</button></li>
+							<li><button (click)="onChangeFilter('UI/UX')" [ngClass]="{'current': selected !== 'UI/UX' }" class="btn portfolio_btn system_btn mobile_tabs ">Web Design</button></li>
+							<li><button (click)="onChangeFilter('WEB')" [ngClass]="{'current': selected !== 'WEB' }" class="btn portfolio_btn system_btn mobile_tabs">Web Application</button></li>
+							<li><button (click)="onChangeFilter('MOBILE')" [ngClass]="{'current': selected !== 'MOBILE' }" class="btn portfolio_btn system_btn mobile_tabs">Mobile Application</button></li>		
 									
 						</ul>
 					</div>

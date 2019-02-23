@@ -15,25 +15,25 @@
     <div class="port_detail_next_search">
       <h4 class="system_font_color mtb-40">Categories</h4>
       <h5>
-          <a (click)="goToCategory('WEB')">
+          <a (click)="goToCategory('ALL')">
             All
             <i class="fa fa-angle-right pull-right"></i>
           </a>
         </h5>
       <h5>
-        <a (click)="goToCategory('WEB')">
+        <a (click)="goToCategory('UI/UX')">
           Web Desing
           <i class="fa fa-angle-right pull-right"></i>
         </a>
       </h5>
       <h5>
-        <a routerLink="/portfolio">
+        <a (click)="goToCategory('WEB')">
           Web Application
           <i class="fa fa-angle-right pull-right"></i>
         </a>
       </h5>
       <h5>
-        <a routerLink="/portfolio">
+        <a (click)="goToCategory('MOBILE')">
           Mobile Application
           <i class="fa fa-angle-right pull-right"></i>
         </a>
@@ -44,7 +44,7 @@
     <div>
       <h4 class="system_font_color mtb-40">Featured Projects</h4>
       <div *ngFor="let item of recentPublish" class="row recent_post">
-        <a href="portfolio_details.html#" target="_blank">
+        <a (click)="goToProject(item)"  target="_blank">
           <div class="col-sm-4">
             <img class="img img-responsive" src="{{item.promo}}" alt="Post">
           </div>
@@ -59,7 +59,7 @@
 
 
 
-    <!--Tags-->
+    <!-- Tags-->
     <!-- <div class="port_tags">
       <h4 class="system_font_color mtb-40">Tags</h4>
       <a href="portfolio_details.html#" class="btn system_btn">Coading</a>
@@ -68,6 +68,5 @@
       <a href="portfolio_details.html#" class="btn system_btn">CRM</a>
       <a href="portfolio_details.html#" class="btn system_btn">CMS</a>
       <a href="portfolio_details.html#" class="btn system_btn">ERP</a>
-    </div> -->
-
-  </div>
+    </div>
+  </div> -->

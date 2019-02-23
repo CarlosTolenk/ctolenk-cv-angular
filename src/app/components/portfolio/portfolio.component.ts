@@ -29,31 +29,36 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit() {
     this.data = JSON.parse(localStorage.getItem('portfoliopage'));    
-    this.filterData = this.data.projects;      
+    this.filterData = this.data.projects;  
+    
+    let storage = localStorage.getItem('categorySelected').toString();
+    storage = storage.replace('"', '');
+    storage = storage.replace('"', '');
+    this.selected = storage;
+   
 
-    // if(localStorage.getItem('categorySelected')){
-    //   this.selected = localStorage.getItem('categorySelected');
-    //   console.log(this.selected);      
-    // }else{
-       this.selected = 'ALL';  
-    //    console.log(this.selected);
-    // }   
-
-    // this.onChangeFilter(this.selected);
+    if(this.selected !== 'ALL'){     
+      this.onChangeFilter(this.selected);
+    }else{
+      this.selected = 'ALL';  
+      this.onChangeFilter(this.selected);
+    }
   }
 
   onChangeFilter(filter){
-    this.easeToggle=false;
+    this.easeToggle=false;  
     if(filter == 'ALL'){
       this.filterData = this.data.projects;
     }else{
       this.filterData = this.data.projects.filter(word => word.category == filter)
     }
-    this.selected = filter;  
- 
-    this.onEffect();
   
+    this.selected = filter;   
+    localStorage.setItem('categorySelected', JSON.stringify('ALL'));      
+    this.onEffect();  
   }
+
+  
 
   onEffect(){
     let selectedAnimate = Math.floor(Math.random() * 10) + 1 ;
@@ -70,10 +75,6 @@ export class PortfolioComponent implements OnInit {
       case 9: this.classAnimated = 'zoomInRight'; break;
       case 10: this.classAnimated = 'jackInTheBox'; break;
     }
-    console.log(this.classAnimated);
-
-
-
 
     setInterval(()=>{
       this.easeToggle=true;     

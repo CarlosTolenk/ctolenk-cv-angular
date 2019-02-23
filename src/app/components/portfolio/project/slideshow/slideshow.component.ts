@@ -8,57 +8,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SlideshowComponent implements OnInit {
 
   @Input() projectBig;
-  @Input() projectSmall
+  @Input() projectSmall;
+
+  public toggleSlide:boolean = true;
+  public dataNew;
+
   constructor() {}
-
-  // projectBig = [
-  //   {
-  //     img: "assets/images/portfolio/portfolio_big1.jpg",
-  //     title: 'Contact-us',  
-  //   },
-  //   {
-  //     img: "assets/images/portfolio/portfolio_big2.jpg",
-  //     title: 'Home',  
-  //   },
-  //   {
-  //     img: "assets/images/portfolio/portfolio_big3.jpg",
-  //     title: 'Porftolio',  
-  //   },
-  //   {
-  //     img: "assets/images/portfolio/portfolio_big4.jpg",
-  //     title: 'Contact-us',  
-  //   },
-  //   {
-  //     img: "assets/images/portfolio/portfolio_big5.jpg",
-  //     title: 'About-us',  
-  //   },
-  //   {
-  //     img: "assets/images/portfolio/portfolio_big6.jpg",
-  //     title: 'Section',  
-  //   }   
-  // ]
-
-  // projectSmall = [
-  //   {
-  //     img: "assets/images/portfolio/portfolio_small1.jpg", 
-  //   },
-  //   {
-  //     img: "assets/images/portfolio/portfolio_small2.jpg",   
-  //   },
-  //   {
-  //     img: "assets/images/portfolio/portfolio_small3.jpg",    
-  //   },
-  //   {
-  //     img: "assets/images/portfolio/portfolio_small4.jpg",     
-  //   },
-  //   {
-  //     img: "assets/images/portfolio/portfolio_small5.jpg",     
-  //   },
-  //   {
-  //     img: "assets/images/portfolio/portfolio_small6.jpg",     
-  //   }   
-  // ]
-
 
   slideConfig = {
     "slidesToShow": 1, 
@@ -123,5 +78,11 @@ export class SlideshowComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  deleteSlide(){
+    this.toggleSlide = !this.toggleSlide;
+  }
+
+
 
 }
