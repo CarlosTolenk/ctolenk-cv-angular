@@ -1161,7 +1161,7 @@ blockquote{
     text-overflow: ellipsis;
     white-space: wrap;
     text-align: right;
-    margin-bottom: 1rem;
+    margin-bottom: 5em; 
     cursor: pointer;    
 }
 

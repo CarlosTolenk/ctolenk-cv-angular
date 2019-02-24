@@ -86,7 +86,7 @@
 					<h5 class="mb20">{{projectSeleted.date}}</h5>					
 
 					<p class="mb20">{{projectSeleted.description}}
-						<a routerLink="/portfolio/name-project" target="_blank">   more ...</a>
+						<a data-dismiss="modal" (click)="goToProject(projectSeleted)">   more ...</a> 
 					</p>			
 
 					<h5 class="mb20">
