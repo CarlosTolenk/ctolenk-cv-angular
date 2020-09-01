@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 
-//Services
+// Services
 import {DataInformationService} from '../../services/data-information.service';
 
 
@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
   public year;
   public data;
 
-  constructor(private _dataServices: DataInformationService) {
+  constructor() {
     this.year = new Date().getFullYear();
   }
 

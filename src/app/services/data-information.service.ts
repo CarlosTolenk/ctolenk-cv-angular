@@ -14,24 +14,36 @@ export class DataInformationService {
   private contactPage = [];
   private urlData = 'assets/info.json';
 
-  constructor(private _http: HttpClient, db: AngularFireDatabase) {
-    db.object('homePage').valueChanges().subscribe((data) => {
-      this.setInformationLocal(data, 'homepage');
-    });
-    db.object('resumePage').valueChanges().subscribe((data) => {
-      this.setInformationLocal(data, 'resumepage');
-    });
-    db.object('portfolioPage').valueChanges().subscribe((data) => {
-      this.setInformationLocal(data, 'portfoliopage');
-    });
-    db.object('contactPage').valueChanges().subscribe((data) => {
-      this.setInformationLocal(data, 'contactPage');
-    });
+  constructor(private _http: HttpClient, private db: AngularFireDatabase) {
+  }
 
+  initData(): Observable<boolean> {
+    return new Observable((subscriber) => {
+      this.db.object('homePage').valueChanges().subscribe(async (data) => {
+        await this.setInformationLocal(data, 'homepage');
+        subscriber.next(true);
+      });
+      this.db.object('resumePage').valueChanges().subscribe(async (data) => {
+        await this.setInformationLocal(data, 'resumepage');
+        subscriber.next(true);
+      });
+      this.db.object('portfolioPage').valueChanges().subscribe(async (data) => {
+        await this.setInformationLocal(data, 'portfoliopage');
+        subscriber.next(true);
+      });
+      this.db.object('contactPage').valueChanges().subscribe(async (data) => {
+        await this.setInformationLocal(data, 'contactPage');
+        subscriber.next(true);
+      });
+    });
   }
 
   setInformationLocal(data, label) {
-    localStorage.setItem(label, JSON.stringify(data));
+    return new Promise((resolve) => {
+      localStorage.setItem(label, JSON.stringify(data));
+      resolve(true);
+    });
+
   }
 
 

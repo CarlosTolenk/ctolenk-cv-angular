@@ -32,6 +32,7 @@ import {SlickCarouselModule} from 'ngx-slick-carousel';
 import {ServiceWorkerModule} from '@angular/service-worker';
 import {environment} from '../environments/environment';
 import {SweetAlert2Module} from '@toverux/ngx-sweetalert2';
+import { LoadingPageComponent } from './components/loading-page/loading-page.component';
 
 
 @NgModule({
@@ -41,6 +42,7 @@ import {SweetAlert2Module} from '@toverux/ngx-sweetalert2';
     FooterComponent,
     NotFoundComponent,
     LayoutComponent,
+    LoadingPageComponent,
   ],
   imports: [
     CommonModule,
