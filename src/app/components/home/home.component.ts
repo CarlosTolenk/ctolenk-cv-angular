@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 //Services
-import { DataInformationService } from '../../services/data-information.service';
+import {DataInformationService} from '../../services/data-information.service';
 
 
 @Component({
@@ -15,14 +15,13 @@ export class HomeComponent implements OnInit {
   public year;
   public data;
 
-  constructor(private _dataServices: DataInformationService) { 
+  constructor(private _dataServices: DataInformationService) {
     this.year = new Date().getFullYear();
   }
 
   ngOnInit() {
-    this.data = JSON.parse(localStorage.getItem('homepage'));  
+    this.data = JSON.parse(localStorage.getItem('homepage'));
   }
 
-  
 
 }

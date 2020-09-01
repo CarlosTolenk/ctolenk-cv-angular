@@ -1,39 +1,46 @@
 <div class="jumbotron jumbotron-fluid">
-    <div class="container">
-      <div class="typing-container">
-        <img class="img-banner" src="../../../assets/images/ctolenk-gray.png" alt="ctolen-banner">
-        <h1 class="text-align">I am Carlos Tolentino</h1>		
-        <span class="typing-span" typingAnimation [typeSpeed]="100" [hideCursorOnComplete]="cursor" [condition]="start" [startDelay]="0"   (complete)="onTypingAnimationComplete()">
+  <div class="container">
+    <div class="typing-container">
+      <img class="img-banner" src="../../../assets/images/ctolenk-gray.png" alt="ctolen-banner">
+      <h1 class="text-align">I am Carlos Tolentino</h1>
+      <span class="typing-span" typingAnimation [typeSpeed]="100" [hideCursorOnComplete]="cursor" [condition]="start"
+            [startDelay]="0" (complete)="onTypingAnimationComplete()">
             And I am
-        </span>	
-        <span class="typing-span" *ngIf="stateTyping == 1" typingAnimation [typeSpeed]="100" [hideCursorOnComplete]="cursor" [condition]="start" [startDelay]="1000"   (complete)="onTypingAnimationComplete()">
+        </span>
+      <span class="typing-span" *ngIf="stateTyping == 1" typingAnimation [typeSpeed]="100"
+            [hideCursorOnComplete]="cursor" [condition]="start" [startDelay]="1000"
+            (complete)="onTypingAnimationComplete()">
             {{ stringInterpolation }}
         </span>
-        <span class="typing-span" *ngIf="stateTyping == 2" typingAnimation [typeSpeed]="100" [hideCursorOnComplete]="cursor" [condition]="start" [startDelay]="1000" (complete)="onTypingAnimationComplete()">
+      <span class="typing-span" *ngIf="stateTyping == 2" typingAnimation [typeSpeed]="100"
+            [hideCursorOnComplete]="cursor" [condition]="start" [startDelay]="1000"
+            (complete)="onTypingAnimationComplete()">
             {{ stringInterpolation }}
         </span>
-        <span class="typing-span" *ngIf="stateTyping == 3" typingAnimation [typeSpeed]="100" [hideCursorOnComplete]="cursor" [condition]="start" [startDelay]="1000" (complete)="onTypingAnimationComplete()">
+      <span class="typing-span" *ngIf="stateTyping == 3" typingAnimation [typeSpeed]="100"
+            [hideCursorOnComplete]="cursor" [condition]="start" [startDelay]="1000"
+            (complete)="onTypingAnimationComplete()">
             {{ stringInterpolation }}
-        </span>  
-        <span class="typing-span" *ngIf="stateTyping == 4" typingAnimation [typeSpeed]="100" [hideCursorOnComplete]="cursor" [condition]="start" [startDelay]="1000" (complete)="onTypingAnimationComplete()">
+        </span>
+      <span class="typing-span" *ngIf="stateTyping == 4" typingAnimation [typeSpeed]="100"
+            [hideCursorOnComplete]="cursor" [condition]="start" [startDelay]="1000"
+            (complete)="onTypingAnimationComplete()">
             {{ stringInterpolation }}
-        </span>  
-      
-      </div>       
+        </span>
+
     </div>
+  </div>
 
-    <div class="text-phrase">
-        <p>{{data.lema}}</p>
-    </div>
-
-
-      
-    <div class="goto-container">
-        <a (click)="navigationBeggin(750)"><i class="fa fa-arrow-down"></i></a>       
-    </div> 
+  <div class="text-phrase">
+    <p>{{data.lema}}</p>
+  </div>
 
 
-  
- </div>
+  <div class="goto-container">
+    <a (click)="navigationBeggin(750)"><i class="fa fa-arrow-down"></i></a>
+  </div>
+
+
+</div>
 
 

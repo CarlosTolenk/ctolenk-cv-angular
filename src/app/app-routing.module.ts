@@ -1,35 +1,34 @@
-import { Routes } from '@angular/router';
+import {Routes} from '@angular/router';
 
 // Components
-import { NotFoundComponent } from './components/not-found/not-found.component'; 
-import { LayoutComponent } from './components/layout/layout.component';
-
+import {NotFoundComponent} from './components/not-found/not-found.component';
+import {LayoutComponent} from './components/layout/layout.component';
 
 
 export const Approutes: Routes = [
   {
     path: '',
     component: LayoutComponent,
-    children:[         
-      { path: '', redirectTo: '/home', pathMatch: 'full' },
-      { path: '', loadChildren: './components/home/home.module#HomeModule'},
-      { path: '', loadChildren: './components/resume/resumeCT.module#ResumeCTModule'},
-      { path: '', loadChildren: './components/portfolio/portfolio.module#PortfolioModule'},
-      { path: '', loadChildren: './components/blog/blog.module#BlogModule'},
-      { path: '', loadChildren: './components/contact-us/contact-us.module#ContactUsModule'},
-    
-    ] 
+    children: [
+      {path: '', redirectTo: '/home', pathMatch: 'full'},
+      {path: '', loadChildren: './components/home/home.module#HomeModule'},
+      {path: '', loadChildren: './components/resume/resumeCT.module#ResumeCTModule'},
+      {path: '', loadChildren: './components/portfolio/portfolio.module#PortfolioModule'},
+      {path: '', loadChildren: './components/blog/blog.module#BlogModule'},
+      {path: '', loadChildren: './components/contact-us/contact-us.module#ContactUsModule'},
+
+    ]
   },
 
   {
     path: 'home',
     component: LayoutComponent,
-    children:[
-      { path: '', loadChildren: './components/home/home.module#HomeModule'}    
-    ] 
+    children: [
+      {path: '', loadChildren: './components/home/home.module#HomeModule'}
+    ]
   },
 
 
-  { path: '**', component: NotFoundComponent }
-  
+  {path: '**', component: NotFoundComponent}
+
 ];

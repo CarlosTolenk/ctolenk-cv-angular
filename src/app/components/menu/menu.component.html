@@ -1,49 +1,49 @@
-
 <!-- Side Navigation -->
-<nav [className]="toogle ? 'cd-side-navigation sidebar selectecBar' : 'cd-side-navigation sidebar unselectecBar'" 
+<nav [className]="toogle ? 'cd-side-navigation sidebar selectecBar' : 'cd-side-navigation sidebar unselectecBar'"
 
-	>
-	<ul>
-		<li>
-			<a routerLink="/home" routerLinkActive="selected">
-				<span class="home_icon"></span>
-				<span>Home</span>
-			</a>
-		</li>
-		<li>
-			<a routerLink="/resume" routerLinkActive="selected">
-				<span class="resume_icon"></span>
-				<span>Resume</span>
-			</a>
-		</li>
-		<li>
-			<a routerLink="/portfolio" routerLinkActive="selected">
-				<span class="portfolio_icon"></span>
-				<span>Portfolio</span>
-			</a>
-		</li>
-		<li>
-			<a routerLink="/blog" routerLinkActive="selected">
-				<span class="blog_icon"></span>
-				<span>Blog</span>
-			</a>
-		</li>
-		<li>
-			<a routerLink="/contact-ctolenk" routerLinkActive="selected">
-				<span class="cont_icon"></span>
-				<span>Contact us</span>
-			</a>
-		</li>
-	</ul>
+>
+  <ul>
+    <li>
+      <a routerLink="/home" routerLinkActive="selected">
+        <span class="home_icon"></span>
+        <span>Home</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/resume" routerLinkActive="selected">
+        <span class="resume_icon"></span>
+        <span>Resume</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/portfolio" routerLinkActive="selected">
+        <span class="portfolio_icon"></span>
+        <span>Portfolio</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/blog" routerLinkActive="selected">
+        <span class="blog_icon"></span>
+        <span>Blog</span>
+      </a>
+    </li>
+    <li>
+      <a routerLink="/contact-ctolenk" routerLinkActive="selected">
+        <span class="cont_icon"></span>
+        <span>Contact us</span>
+      </a>
+    </li>
+  </ul>
 </nav>
 <!-- End Navigation -->
 
 <!--Mobile Menu icon-->
-<div id="sidebar-btn" class="sidebar-btn toggle_icon_block" data-action="toggle" data-side="left" (clickOutside)="onClickedOutside($event)" (click)="toogleMenu()"     >
-	<div id="toggle_icon"  [className]="toogle ? 'toggle_icon open' : 'toggle_icon'" >
-		<span></span>
-		<span></span>
-		<span></span>
-	</div>
+<div id="sidebar-btn" class="sidebar-btn toggle_icon_block" data-action="toggle"
+     data-side="left" (clickOutside)="onClickedOutside($event)" (click)="toogleMenu()"     >
+  <div id="toggle_icon"  [className]="toogle ? 'toggle_icon open' : 'toggle_icon'" >
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 </div>
 <!--End Mobile Menu icon-->

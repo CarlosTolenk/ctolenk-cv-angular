@@ -1,27 +1,26 @@
-.social-network{   
-    padding-bottom: 2em;    
+.social-network {
+  padding-bottom: 2em;
+  display: flex;
+  align-content: center;
+  align-items: center;
+
+
+  a {
     display: flex;
     align-content: center;
     align-items: center;
- 
-
-    a{
-        display: flex;
-        align-content: center;
-        align-items: center;
-        margin: 0.7em;
-        padding: 1em;   
-        background-color: var(--secondary-color);
-        border-radius: 100%;
-       
- 
-    }
-
-    i{
-        font-size: 1.5em;
+    margin: 0.7em;
+    padding: 1em;
+    background-color: var(--secondary-color);
+    border-radius: 100%;
 
 
-        
-    }
+  }
+
+  i {
+    font-size: 1.5em;
+
+
+  }
 
 }
